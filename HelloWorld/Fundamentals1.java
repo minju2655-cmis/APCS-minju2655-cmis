@@ -3,6 +3,11 @@ public class Fundamentals1
     public static void main ( String args[] ){
         dataTypes();
         
+      
+        int multiply1 = multiply (3,4);
+        System.out.println(multiply1);
+        //hard coded variables as arguments
+        
     } // end method main
     public static void dataTypes(){
         byte a = 100;
@@ -21,22 +26,39 @@ public class Fundamentals1
         String d2="Double data type is a double-precision 64-bit IEEE 754 floating point. Never be used for precise values such as currency. Three examples - ";
         String one1="Boolean data type represents one bit of information. Used for simple flags that track true/false conditions. Three examples - ";
         String letterA1="Char data type is a single 16-bit Unicode character. Used to store any character. Three examples - ";
-        System.out.format("%d %d %d %d %f %f %b %c",a,s,i,l,f1,d1); //or System.out.format
+        System.out.format("%d %d %d %d %f %f %b %c",a,s,i,l,f1,d1,one,letterA); //or System.out.format
         //code the problems here
     }
     public static int add(int a, int b){
-        return a+b;
+        int result=a+b;
+        return result;
     }
     public static int subtract(int a, int b){
-        return a-b;
+        int result=a-b;
+        return result;
     }
     public static int multiply(int a, int b){
-        return a*b;
+        int result=a*b;
+        return result;
     }
     public static int divide(int a, int b){
-        return a/b;
+        int result=a/b;
+        return result;
     }
     public static double add(double a, double b){
-        return a+b;
+        double result=a+b;
+        return result;
+    }
+    public static double subtract(double a, double b){
+        double result=a-b;
+        return result;
+    }
+    public static double multiply(double a, double b){
+        double result=a*b;
+        return result;
+    }
+    public static double divide(double a, double b){
+        double result=a/b;
+        return result;
     }
 } // end class Fundamentals1 
