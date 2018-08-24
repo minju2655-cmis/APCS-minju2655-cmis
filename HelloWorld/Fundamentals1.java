@@ -21,7 +21,7 @@ public class Fundamentals1
         String d2="Double data type is a double-precision 64-bit IEEE 754 floating point. Never be used for precise values such as currency. Three examples - ";
         String one1="Boolean data type represents one bit of information. Used for simple flags that track true/false conditions. Three examples - ";
         String letterA1="Char data type is a single 16-bit Unicode character. Used to store any character. Three examples - ";
-        System.out.format("%d %d %d %d %f %f %b %c %s %s %s %s %s %s %s %s",a,s,i,l,f1,d1,one,letterA,"\n",a1,"\n",s1,"\n",i1,"\n",l1,"\n",f2,"\n",d2,"\n",one1,"\n",letterA1); //or System.out.format
+        System.out.format("%d %d %d %d %f %f %b %c",a,s,i,l,f1,d1); //or System.out.format
         //code the problems here
     }
     public static int add(int a, int b){
