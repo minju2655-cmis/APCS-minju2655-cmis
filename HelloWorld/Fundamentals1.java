@@ -1,11 +1,16 @@
+import java.util.Scanner;
 public class Fundamentals1
 {
     public static void main ( String args[] ){
         dataTypes();
         
-      
-        int multiply1 = multiply (3,4);
-        System.out.println(multiply1);
+        System.out.printf("%n %n");
+        int numbers = add(3,4);
+        System.out.println("The addition of two arguments is: " + numbers);
+        int random = multiply(54,67);
+        System.out.println("The multiplication of two arguments is: " + random);
+        
+        
         //hard coded variables as arguments
         
     } // end method main
@@ -26,7 +31,7 @@ public class Fundamentals1
         String d2="Double data type is a double-precision 64-bit IEEE 754 floating point. Never be used for precise values such as currency. Three examples - ";
         String one1="Boolean data type represents one bit of information. Used for simple flags that track true/false conditions. Three examples - ";
         String letterA1="Char data type is a single 16-bit Unicode character. Used to store any character. Three examples - ";
-        System.out.format("%d %d %d %d %f %f %b %c",a,s,i,l,f1,d1,one,letterA); //or System.out.format
+        System.out.format("%d %d %d %d %f %f %b %c %n %n%s %n%s %n%s %n%s %n%s %n%s %n%s %n%s",a,s,i,l,f1,d1,one,letterA,a1,s1,i1,l1,f2,d2,one1,letterA1); //or System.out.format
         //code the problems here
     }
     public static int add(int a, int b){
