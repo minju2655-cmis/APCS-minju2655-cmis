@@ -69,14 +69,21 @@ public class Fundamentals1
     }
     public static void compare(int a, int b){
         if (a>b){
-            System.out.println("The value of a is this and and it is greater than b whose value is this");
+            System.out.printf("The value of %d is this and and it is greater than %d whose value is this", a, b);
         }
-        if (a<b){
-            System.out.println("The value of a is this and and it is less than b whose value is this");
+        else if (a<b){
+            System.out.printf("The value of %d is this and and it is less than %d whose value is this",a , b);
         }
-        if (a==b){
-            System.out.println("The value of a is this and and it is eqaul to b whose value is this");
+        else if (a==b){
+            System.out.printf("The value of %d is this and and it is eqaul to %d whose value is this",a, b);
         }
-        
+    }
+    public static void evenOddZero(int a){
+        if (a==0){
+        }
+        else if (a/2==0) {
+        }
+        else {
+        }
     }
 } // end class Fundamentals1 
