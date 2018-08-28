@@ -9,6 +9,7 @@ public class Fundamentals1
         System.out.println("The addition of two arguments is: " + numbers);
         int random = multiply(54,67);
         System.out.println("The multiplication of two arguments is: " + random);
+       
         
         
         //hard coded variables as arguments
@@ -65,5 +66,17 @@ public class Fundamentals1
     public static double divide(double a, double b){
         double result=a/b;
         return result;
+    }
+    public static void compare(int a, int b){
+        if (a>b){
+            System.out.println("The value of a is this and and it is greater than b whose value is this");
+        }
+        if (a<b){
+            System.out.println("The value of a is this and and it is less than b whose value is this");
+        }
+        if (a==b){
+            System.out.println("The value of a is this and and it is eqaul to b whose value is this");
+        }
+        
     }
 } // end class Fundamentals1 
