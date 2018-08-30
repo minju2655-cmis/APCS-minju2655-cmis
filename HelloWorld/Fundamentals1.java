@@ -18,6 +18,10 @@ public class Fundamentals1
         
         System.out.printf("%n %n");
         compare(5,7);
+        System.out.printf("%n");
+        compare(15,4);
+        System.out.printf("%n");
+        compare(9,9);
         
         System.out.printf("%n %n");
         int odd = evenOddZero(5);
@@ -26,6 +30,9 @@ public class Fundamentals1
         System.out.println("evenOddZero for your number is: " + even);
         int zero = evenOddZero(0);
         System.out.println("evenOddZero for your number is: " + zero);
+        
+        System.out.printf("%n %n");
+        sqaureTable();
 
         
     } // end method main
@@ -83,13 +90,13 @@ public class Fundamentals1
     }
     public static void compare(int a, int b){
         if (a>b){
-            System.out.printf("The value of %d is this and and it is greater than %d whose value is this", a, b);
+            System.out.printf("The value of a is %d and and it is greater than b whose value is %d", a, b);
         }
         else if (a<b){
-            System.out.printf("The value of %d is this and and it is less than %d whose value is this",a , b);
+            System.out.printf("The value of a is %d and and it is less than b whose value is %d",a , b);
         }
         else if (a==b){
-            System.out.printf("The value of %d is this and and it is eqaul to %d whose value is this",a, b);
+            System.out.printf("The value of a is %d and and it is eqaul to b whose value is %d",a, b);
         }
     }
     public static int evenOddZero(int a){
@@ -103,5 +110,10 @@ public class Fundamentals1
             return 1;
         }
     }    
-   
-} // end class Fundamentals1 
+    public static void sqaureTable(){
+        int count = 1;
+        while (count <11){
+            count++;
+      }
+    }
+}// end class Fundamentals1 
