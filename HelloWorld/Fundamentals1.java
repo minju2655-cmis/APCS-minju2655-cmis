@@ -10,9 +10,23 @@ public class Fundamentals1
         int random = multiply(54,67);
         System.out.println("The multiplication of two arguments is: " + random);
        
+        //System.out.printf("%n %n");
+        //Scanner userInput=new Scanner(System.in);
+        //int sub = userInput.subtract();
+        //System.out.println("The multiplication of two arguments is:" +  userInput.subtract);
+        //userInput.close();
         
+        System.out.printf("%n %n");
+        compare(5,7);
         
-        //hard coded variables as arguments
+        System.out.printf("%n %n");
+        int odd = evenOddZero(5);
+        System.out.println("evenOddZero for your number is: " + odd);
+        int even = evenOddZero(10);
+        System.out.println("evenOddZero for your number is: " + even);
+        int zero = evenOddZero(0);
+        System.out.println("evenOddZero for your number is: " + zero);
+
         
     } // end method main
     public static void dataTypes(){
@@ -78,12 +92,16 @@ public class Fundamentals1
             System.out.printf("The value of %d is this and and it is eqaul to %d whose value is this",a, b);
         }
     }
-    public static void evenOddZero(int a){
+    public static int evenOddZero(int a){
         if (a==0){
+            return 0;
         }
-        else if (a/2==0) {
+        else if (a%2==0||a==-1){
+            return -1;
         }
         else {
+            return 1;
         }
-    }
+    }    
+   
 } // end class Fundamentals1 
