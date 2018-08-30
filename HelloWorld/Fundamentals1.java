@@ -10,11 +10,20 @@ public class Fundamentals1
         int random = multiply(54,67);
         System.out.println("The multiplication of two arguments is: " + random);
        
-        //System.out.printf("%n %n");
-        //Scanner userInput=new Scanner(System.in);
-        //int sub = userInput.subtract();
-        //System.out.println("The multiplication of two arguments is:" +  userInput.subtract);
-        //userInput.close();
+        System.out.printf("%n %n");
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Two numbers for multiplication:");
+        int mulA = userInput.nextInt();
+        int mulB = userInput.nextInt();
+        int mulResult = multiply(mulA,mulB);
+        System.out.println("The multiplication of two numbers is: " + mulResult);
+        System.out.printf("%n %n");
+        System.out.println("Two numbers for division:");
+        int divA = userInput.nextInt();
+        int divB = userInput.nextInt();
+        int divResult = divide(divA,divB);
+        System.out.println("The division of two numbers is: " + divResult);
+        userInput.close();
         
         System.out.printf("%n %n");
         compare(5,7);
@@ -24,12 +33,9 @@ public class Fundamentals1
         compare(9,9);
         
         System.out.printf("%n %n");
-        int odd = evenOddZero(5);
-        System.out.println("evenOddZero for your number is: " + odd);
-        int even = evenOddZero(10);
-        System.out.println("evenOddZero for your number is: " + even);
-        int zero = evenOddZero(0);
-        System.out.println("evenOddZero for your number is: " + zero);
+        System.out.println("evenOddZero for your number is: " + evenOddZero(5));
+        System.out.println("evenOddZero for your number is: " + evenOddZero(10));
+        System.out.println("evenOddZero for your number is: " + evenOddZero(0));
         
         System.out.printf("%n %n");
         sqaureTable();
@@ -45,15 +51,16 @@ public class Fundamentals1
         double d1 = 123.4;
         boolean one = true;
         char letterA = 'A';
-        String a1="Byte data type is an 8-bit signed two's complement integer. Used to save space in large arrays, mainly in place of integers, since a byte is four times smaller than an integer. Three examples - ";
-        String s1="Short data type is a 16-bit signed two's complement integer. Used to save memory as byte data type. A short is 2 times smaller than an integer. Three examples -";
-        String i1="Int data type is a 32-bit signed two's complement integer. Used as the default data type for integral values unless there is a concern about memory. Three examples -";
-        String l1="Long data type is a 64-bit signed two's complement integer. Used when a wider range than int is needed. Three examples -";
-        String f2="Float data type is a single-precision 32-bit IEEE 754 floating point. Never used for precise values such as currency. Three examples - ";
-        String d2="Double data type is a double-precision 64-bit IEEE 754 floating point. Never be used for precise values such as currency. Three examples - ";
-        String one1="Boolean data type represents one bit of information. Used for simple flags that track true/false conditions. Three examples - ";
-        String letterA1="Char data type is a single 16-bit Unicode character. Used to store any character. Three examples - ";
-        System.out.format("%d %d %d %d %f %f %b %c %n %n%s %n%s %n%s %n%s %n%s %n%s %n%s %n%s",a,s,i,l,f1,d1,one,letterA,a1,s1,i1,l1,f2,d2,one1,letterA1); //or System.out.format
+        String a1="Byte data type is an 8-bit signed two's complement integer. (-128 to 127) \nThree examples - Number of students in a class / Number of fingers / Test score out of 100 ";
+        String s1="Short data type is a 16-bit signed two's complement integer. (-32768 to 32767) \nExample - Anything that is - (byte < x < int and long) / ";
+        String i1="Int data type is a 32-bit signed two's complement integer. (-2147483648 to 2147483647) \nExample - Anything that is (byte and short < x <int) /  ";
+        String l1="Long data type is a 64-bit signed two's complement integer. (-9223372036854775808 to 9223372036854775807) \nExample - Anything that is (byte and short and int < x) ";
+        String f2="Float data type is a single-precision 32-bit IEEE 754 floating point. (3.40282347 * 10^38 to 1.40239846 * 10^-45) \nThree examples - Few decimals of pi / GPA / Fraction";
+        String d2="Double data type is a double-precision 64-bit IEEE 754 floating point. (1.7976931348623157 * 10^308 to 4.9406564584124654  * 10^-324) \nExamples - Anything that is (float < x) ";
+        String one1="Boolean data type represents one bit of information. (0 or 1 (true or false)) \nThree examples - Sibling or no sibling / Grade 11 or not Grade 11 / Born in 2001 or not born in 2001 ";
+        String letterA1="Char data type is a single 16-bit Unicode character. (0 to 65535) \nThree examples - First name / Last name / Letter grades ";
+        String order="Smallest to Biggest: boolean(1bit) / byte(8bit) / short(16bit) / char (16bit) / int(32bit) / float(32bit) / long(64bit) / double(64bit)";
+        System.out.format("%d %d %d %d %f %f %b %c %n %n%s %n%s %n%s %n%s %n%s %n%s %n%s %n%s %n%s",a,s,i,l,f1,d1,one,letterA,a1,s1,i1,l1,f2,d2,one1,letterA1,order); //or System.out.format
         //code the problems here
     }
     public static int add(int a, int b){
@@ -111,9 +118,12 @@ public class Fundamentals1
         }
     }    
     public static void sqaureTable(){
-        int count = 1;
-        while (count <11){
-            count++;
-      }
+        int count;
+        for (count =1; count <=10; count++)
+        {
+            int sq=count*count;
+            int random=(int)(Math.random()*((sq-count)+1))+count;
+            System.out.format("%d\t%d\t%d\n",count,sq,random);
+        }
     }
 }// end class Fundamentals1 
