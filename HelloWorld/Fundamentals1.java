@@ -126,4 +126,31 @@ public class Fundamentals1
             System.out.format("%d\t%d\t%d\n",count,sq,random);
         }
     }
+    public static void triangle(int a){
+        int count;
+        int result =0;
+        System.out.format("%d Triangle is: ",a);
+        for (count=a; a>=1; a--)
+        {   
+            result+=a;
+        }
+        System.out.format("%d",result);
+    }
+    public static void Pyramid(int a){
+        int count;
+        int result =0;
+        System.out.format("%d Pyramid is: ",a);
+        for (count=a; a>=1; a--)
+        {   
+            int b=a*a;
+            result+=b;
+        }
+        System.out.format("%d",result);
+    }
+    public static String checkerboard(int h, int w){
+        
+        
+        
+        
+    }
 }// end class Fundamentals1 
