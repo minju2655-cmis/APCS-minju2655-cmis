@@ -147,10 +147,14 @@ public class Fundamentals1
         }
         System.out.format("%d",result);
     }
-    public static String checkerboard(int h, int w){
+    //public static String checkerboard(int h, int w){
+        //String a =" ";
+        //String b = "+";
+        //String c = "-";
+        //String d = "|";
         
         
+  
         
-        
-    }
+    //}
 }// end class Fundamentals1 
