@@ -147,14 +147,41 @@ public class Fundamentals1
         }
         System.out.format("%d",result);
     }
-    //public static String checkerboard(int h, int w){
-        //String a =" ";
-        //String b = "+";
-        //String c = "-";
-        //String d = "|";
-        
-        
-  
-        
-    //}
+    public static void checkerboard(int h, int w){
+        String a =" ";
+        String b = "+";
+        String c = "-";
+        String d = "|";
+        String e = "#";
+        String f =".";
+        int result = 0;
+        int width;
+        int height;
+        System.out.print(b);
+        for (width=w; w>0; w--)
+        {
+          System.out.print(c);
+        }
+        System.out.print(b);
+        for (height=h;h>0;h--)
+        {
+          System.out.printf("|");
+          if (h>0){
+            System.out.printf("\n|");
+            System.out.println(f);
+          }
+        }
+
+
+        for (height=h; h>0; h--)
+        {
+          
+        }
+        //for (width=w; w>0; w--)
+        //{
+          //System.out.print(c);
+          //if (w>0) {
+            //System.out.print(b);
+          //}
+    }
 }// end class Fundamentals1 
