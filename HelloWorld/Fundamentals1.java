@@ -148,40 +148,46 @@ public class Fundamentals1
         System.out.format("%d",result);
     }
     public static void checkerboard(int h, int w){
-        String a =" ";
-        String b = "+";
-        String c = "-";
-        String d = "|";
-        String e = "#";
-        String f =".";
-        int result = 0;
-        int width;
-        int height;
-        System.out.print(b);
-        for (width=w; w>0; w--)
+        String a = "+";
+        for (int width = w; width>0; width--)
         {
-          System.out.print(c);
+            a += "-";
         }
-        System.out.print(b);
-        for (height=h;h>0;h--)
+        a+="+";
+        System.out.println(a);//Top Boarder
+        String b = ".";
+        String c = "#";
+        String d =" ";
+        int random= (int) (Math.random()+1);
+        for (int height=h;h>0;h--)
         {
-          System.out.printf("|");
-          if (h>0){
-            System.out.printf("\n|");
-            System.out.println(f);
-          }
-        }
+            if (h%2==0){
+               System.out.println("|");
+               for (int width = w; width>0; width--)
+               {
+                   if (w%2==0){
+                    d+=b;
+                    }
+                   else if(w%2==1){
+                    d+=c;
+                    }
+               }
+            }   
 
-
-        for (height=h; h>0; h--)
-        {
-          
+            if (h%2==1){
+               System.out.println("|");
+               for (int width = w; width>0; width--)
+               {
+                   if (w%2==0){
+                    d+=b;
+                    }
+                   else if(w%2==1){
+                    d+=c;
+                   }
+            }
+            }
+        System.out.println(b);
+        System.out.println(a);//Bottom Boarder
         }
-        //for (width=w; w>0; w--)
-        //{
-          //System.out.print(c);
-          //if (w>0) {
-            //System.out.print(b);
-          //}
-    }
-}// end class Fundamentals1 
+        }
+ }// end class Fundamentals1 
