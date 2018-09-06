@@ -147,47 +147,46 @@ public class Fundamentals1
         }
         System.out.format("%d",result);
     }
-    public static void checkerboard(int h, int w){
+    public static void checkerboard(int height, int width){
         String a = "+";
-        for (int width = w; width>0; width--)
+        for (int w = width; w>0; w--)
         {
             a += "-";
         }
         a+="+";
-        System.out.println(a);//Top Boarder
-        String b = ".";
-        String c = "#";
-        String d =" ";
-        int random= (int) (Math.random()+1);
-        for (int height=h;h>0;h--)
+        String d = "";
+        int random= (int) (Math.random()*10);
+        for (int h=height; h>0; h--)
         {
-            if (h%2==0){
-               System.out.println("|");
-               for (int width = w; width>0; width--)
+            if (h%2==1){
+               d+="|";
+               for (int w = width; w>0; w--)
                {
-                   if (w%2==0){
-                    d+=b;
+                   if (w%2==1){
+                       d+="#";
                     }
-                   else if(w%2==1){
-                    d+=c;
+                   else if(w%2==0){
+                       d+=" ";
                     }
                }
-            }   
-
-            if (h%2==1){
-               System.out.println("|");
-               for (int width = w; width>0; width--)
+               d+="|\n";
+            }  
+            else if (h%2==0){
+               d+="|";
+               for (int w=width; w>0; w--)
                {
                    if (w%2==0){
-                    d+=b;
+                       d+="#";
                     }
                    else if(w%2==1){
-                    d+=c;
-                   }
+                       d+=" ";
+                    }
+                }
+               d+="|\n";
             }
-            }
-        System.out.println(b);
-        System.out.println(a);//Bottom Boarder
-        }
-        }
+        }  
+        System.out.println(a);
+        System.out.print(d);
+        System.out.print(a);//Bottom Boarder
+    }
  }// end class Fundamentals1 
