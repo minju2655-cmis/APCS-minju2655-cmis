@@ -136,11 +136,41 @@ public class Fundamentals1
         a+="+";
         String d = "";
         int random = (int)(Math.random()*10);
-        int hrandom = (int)(Math.random()+1);
+        int hrandom = (int)(Math.random()/2);
         hrandom = hrandom*2+1;
-       
-
-        
+        int wrandom = (int)(Math.random()/2);
+        wrandom = wrandom*2+1;
+        for (int h = 0; h < height; h++)
+        {
+            if (h%2 == 1)
+            {
+                d += "|";
+                for (int w = 0; w < width; w++)
+                {
+                    if (w%2 ==1 && w == hrandom && h == hrandom)
+                        d += String.format("%d",random);
+                    else if (w%2 == 1)
+                        d += "#";
+                    else if (w%2 == 0)
+                        d += " ";
+                }
+                d += "|\n";
+            }
+            if (h%2 == 0)
+            {
+                d += "|";
+                for (int w = 0; w < width; w++)
+                {
+                    if (w%2 == 0 && w == hrandom && h ==hrandom)
+                        d += String.format("%d",random);
+                    if (w%2 == 0)
+                        d += "#";
+                    else if (w%2 == 1)
+                        d += " ";
+                }
+                d += "|\n";
+            }
+        }
         System.out.println(a);//Top Boarder
         System.out.print(d); //Middle
         System.out.print(a);//Bottom Boarder
