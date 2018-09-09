@@ -126,4 +126,15 @@ public class Fundamentals1
             System.out.format("%d\t%d\t%d\n",count,sq,random);
         }
     }
+    public static void checkerboard(int height, int width){
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
 }// end class Fundamentals1 
