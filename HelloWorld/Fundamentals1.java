@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Fundamentals1
 {
     public static void main ( String args[] ){
@@ -11,12 +12,13 @@ public class Fundamentals1
         System.out.println("The multiplication of two arguments is: " + random);
        
         System.out.printf("%n %n");
-        Scanner userInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);//import java.util.Scanner
         System.out.println("Two numbers for multiplication:");
         int mulA = userInput.nextInt();
         int mulB = userInput.nextInt();
         int mulResult = multiply(mulA,mulB);
         System.out.println("The multiplication of two numbers is: " + mulResult);
+        
         System.out.printf("%n %n");
         System.out.println("Two numbers for division:");
         int divA = userInput.nextInt();
@@ -147,46 +149,48 @@ public class Fundamentals1
         }
         System.out.format("%d",result);
     }
-    public static void checkerboard(int height, int width){
+    public static void checkerboard(int h, int w){
         String a = "+";
-        for (int w = width; w>0; w--)
+        for (int q = w; q>0; q--)
         {
             a += "-";
         }
         a+="+";
         String d = "";
-        int random= (int) (Math.random()*10);
-        for (int h=height; h>0; h--)
+        String e = "#";
+        Random rand = new Random();//import java.util.Random
+        int random = rand.nextInt(10)+0; //int random=rand.nextInt(max)+min
+        for (int g=h; g>0; g--)
         {
-            if (h%2==1){
+            if (g%2==0){
                d+="|";
-               for (int w = width; w>0; w--)
+               for (int q=w; q>0; q--)
                {
-                   if (w%2==1){
+                   if (q%2==0){
                        d+="#";
                     }
-                   else if(w%2==0){
-                       d+=" ";
-                    }
-               }
-               d+="|\n";
-            }  
-            else if (h%2==0){
-               d+="|";
-               for (int w=width; w>0; w--)
-               {
-                   if (w%2==0){
-                       d+="#";
-                    }
-                   else if(w%2==1){
+                   else if(q%2==1){
                        d+=" ";
                     }
                 }
                d+="|\n";
             }
+            if (g%2==1){
+               d+="|";
+               for (int q=w; q>0; q--)
+               {
+                   if (q%2==1){
+                       d+="#";
+                    }
+                   else if(q%2==0){
+                       d+=" ";
+                    }
+               }
+               d+="|\n";
+            }   
         }  
-        System.out.println(a);
-        System.out.print(d);
+        System.out.println(a);//Top Boarder
+        System.out.print(d); //Middle
         System.out.print(a);//Bottom Boarder
     }
  }// end class Fundamentals1 
