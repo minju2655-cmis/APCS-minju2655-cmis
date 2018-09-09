@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Fundamentals1
 {
     public static void main ( String args[] ){
@@ -11,12 +12,13 @@ public class Fundamentals1
         System.out.println("The multiplication of two arguments is: " + random);
        
         System.out.printf("%n %n");
-        Scanner userInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);//import java.util.Scanner
         System.out.println("Two numbers for multiplication:");
         int mulA = userInput.nextInt();
         int mulB = userInput.nextInt();
         int mulResult = multiply(mulA,mulB);
         System.out.println("The multiplication of two numbers is: " + mulResult);
+        
         System.out.printf("%n %n");
         System.out.println("Two numbers for division:");
         int divA = userInput.nextInt();
@@ -127,14 +129,19 @@ public class Fundamentals1
         }
     }
     public static void checkerboard(int height, int width){
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        String a = "+";
+        for (int w = width; w>0; w--)
+        {
+            a += "-";
+        }
+        a+="+";
+        String d = "";
+        String e = "#";
+        Random rand = new Random();//import java.util.Random
+        int random = rand.nextInt(10)+0; //int random=rand.nextInt(max)+min
+        
+        System.out.println(a);//Top Boarder
+        System.out.print(d); //Middle
+        System.out.print(a);//Bottom Boarder
     }
 }// end class Fundamentals1 
