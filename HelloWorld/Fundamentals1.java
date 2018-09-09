@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 public class Fundamentals1
 {
     public static void main ( String args[] ){
@@ -136,9 +135,11 @@ public class Fundamentals1
         }
         a+="+";
         String d = "";
-        String e = "#";
-        Random rand = new Random();//import java.util.Random
-        int random = rand.nextInt(10)+0; //int random=rand.nextInt(max)+min
+        int random = (int)(Math.random()*10);
+        int hrandom = (int)(Math.random()+1);
+        hrandom = hrandom*2+1;
+       
+
         
         System.out.println(a);//Top Boarder
         System.out.print(d); //Middle
