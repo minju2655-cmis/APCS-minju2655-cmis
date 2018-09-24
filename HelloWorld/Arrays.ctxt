@@ -10,4 +10,6 @@ comment4.params=array\ skip
 comment4.target=void\ printArray(boolean[],\ boolean)
 comment5.params=array\ skip
 comment5.target=void\ printArray(java.lang.String[],\ boolean)
-numComments=6
+comment6.params=array
+comment6.target=int\ lastItem(int[])
+numComments=7
