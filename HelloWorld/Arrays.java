@@ -20,6 +20,13 @@ public class Arrays
         printArray(myList4,true);
         System.out.print("\n");
         
+        System.out.println("The last item is: "+ lastItem(myList));
+        System.out.println("The last item is: "+ lastItem(myList2));
+        System.out.println("The middle item is: "+ middleItem(myList3));
+        System.out.println("The middle item is: "+ middleItem(myList4));
+        
+        System.out.print("\n");
+
     } // end method main
     public static void printArray(int[] array, boolean skip){
         if (skip==true){
@@ -103,6 +110,16 @@ public class Arrays
     }
     public static int[] randomInts(int n, int min, int max){
         int[] array= new int[n];
+        for (int ctr=0; ctr<n;ctr++){
+            array[ctr]=(int)(Math.random()*max-min)+min;
+        }
+        return array;
+    }
+    public static double[] randomDoubles(int n, double min, double max){
+        double[] array= new double[n];
+        for (int ctr=0; ctr<n;ctr++){
+            array[ctr]=(Math.random()*max-min)+min;
+        }
         return array;
     }
 } //end class Arrays 
