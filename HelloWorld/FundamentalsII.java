@@ -3,6 +3,7 @@ public class FundamentalsII
 {
     public static void main ( String args[] ){
         int[] myList = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] example = {2, 11, 4, 16, 3, 21, 17, 0, 7, 10};
         double[] myList2 = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
         boolean[] myList3 ={true, false, false, true, true, false, false};
         String[] myList4 = {"one", "two", "three", "four", "five", "six", "seven", "eight"};
@@ -40,7 +41,13 @@ public class FundamentalsII
         System.out.println(Arrays.toString(copy(myList4)));     
         
         System.out.print("\n");
-        System.out.println(Arrays.toString(pairs(8)));
+        System.out.println("Pairs: "+Arrays.toString(pairs(8)));
+        
+        System.out.print("\n");
+        System.out.println("Concat: "+Arrays.toString(concat(myList, example)));
+        
+        System.out.print("\n");
+        System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
     } // end method main
     public static void printArray(int[] array, boolean skip){
         if (skip==true){
@@ -173,10 +180,33 @@ public class FundamentalsII
         return copy;
     }
     public static int[] pairs(int n){
-        int[] pairs = new int[n];
-        for (int ctr=0;ctr<n;ctr++){
-           pairs[ctr]+=2;
+        int[] pairs = new int[n*2];
+        int a = 1;
+        for (int ctr=0;ctr<pairs.length;ctr++){    
+           pairs[ctr]=a*2;          
+           pairs[ctr+1]=a*2;
+           a+=1;
+           ctr+=1;
         }
         return pairs;
     }
-} //end class FundamentalsII 
+    public static int[] concat(int[] a, int[] b){
+        int[] concat = new int[a.length+b.length];
+        for (int ctr=0;ctr<a.length;ctr++){
+            concat[ctr]=a[ctr];
+        }
+        for (int ctr=0;ctr<b.length;ctr++){
+            concat[ctr+a.length]=b[ctr];
+        }
+        return concat;
+    }
+    public static int[] merge(int[] a, int[] b){
+        int[] merge = new int[a.length+b.length];
+        for (int ctr=0;ctr<a.length;ctr++){
+            for (int i=0;i<b.length;i++){
+                merge[ctr+b.length]=b[i];
+            }
+        }
+        return merge;
+    }
+    }//end class FundamentalsII 
