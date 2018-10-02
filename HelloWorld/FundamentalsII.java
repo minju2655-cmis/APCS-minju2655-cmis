@@ -3,7 +3,7 @@ public class FundamentalsII
 {
     public static void main ( String args[] ){
         int[] myList = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] example = {2, 11, 4, 16, 3, 21, 17, 0, 7, 10};
+        int[] example = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
         double[] myList2 = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
         boolean[] myList3 ={true, false, false, true, true, false, false};
         String[] myList4 = {"one", "two", "three", "four", "five", "six", "seven", "eight"};
@@ -47,7 +47,7 @@ public class FundamentalsII
         System.out.println("Concat: "+Arrays.toString(concat(myList, example)));
         
         System.out.print("\n");
-        System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
+        //System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
     } // end method main
     public static void printArray(int[] array, boolean skip){
         if (skip==true){
@@ -200,13 +200,22 @@ public class FundamentalsII
         }
         return concat;
     }
-    public static int[] merge(int[] a, int[] b){
-        int[] merge = new int[a.length+b.length];
-        for (int ctr=0;ctr<a.length;ctr++){
-            for (int i=0;i<b.length;i++){
-                merge[ctr+b.length]=b[i];
-            }
+    //public static int[] merge(int[] a, int[] b){
+        //int[] merge = new int[a.length+b.length];
+        //for (int ctr=0;ctr<merge.length;ctr++){
+            //if(ctr%2==0){
+                //merge[ctr]=a[ctr/2];
+            //}
+            //else{
+                //merge[ctr]=b[ctr/2];
+            //}
+        //}
+        //return merge;
+    //}
+    public static void reverse(int[] array){
+        for (int ctr=0;ctr<array.length;ctr++){
+            System.out.println(array);
+    
         }
-        return merge;
-    }
+        }
     }//end class FundamentalsII 
