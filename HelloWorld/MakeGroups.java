@@ -9,25 +9,24 @@ public class MakeGroups
     public static String[] makeGroups(String[] names, int groupSize){
         String[] makeGroups = new String[names.length/groupSize];  
         int c = names.length;
-        int a  = (int)(Math.random()*(c-0))+0;
-        String b = "";
-        if (groupSize%2==0){
-            for (int x = 0; x < names.length/groupSize; x++){
-                for (int i = 0; i < groupSize; i++){
-                    
-                    b+= names[a];
+        for (int i=0;i<names.length/groupSize;i++){
+            int a=(int)((Math.random()*(names.length-i))+i);
+            if (a==0){
+                a=0;
+            }
+            if (groupSize%2==0){
+                for (int x=0;x<groupSize;x++){
+                    makeGroups[i]=names[a];
                 }
             }
-        }
-        else if (groupSize%2==1){
-            for (int x = 0; x < names.length/groupSize; x++){
-                for (int i = 0; i < groupSize; i++){
-                    
-                }
-            }
-        }
+            else if (groupSize%2==1){
 
-        return makeGroups;
+            }
+            
+            
+        }
         
+        return makeGroups;
+
     }
 } // end class HelloWorld 
