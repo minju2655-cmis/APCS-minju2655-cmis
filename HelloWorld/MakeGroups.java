@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 public class MakeGroups
 {
     public static void main ( String args[] )
@@ -8,10 +9,21 @@ public class MakeGroups
     } // end method main
     public static String[] makeGroups(String[] names, int groupSize){
         String[] makeGroups = new String[names.length/groupSize];  
-        int c = names.length;
+        String[] random = new String[names.length];
+        int[] c = new int [names.length];
         for (int i=0;i<names.length/groupSize;i++){
             int a=(int)((Math.random()*(names.length-i))+i);
             makeGroups[i]=names[0];
+            for (int integer = 0; integer < names.length; integer++){
+                while (random [integer] == null){
+                    int num = (int)(Math.random() * names.length);
+                    if (c [num] == 0)
+                    {
+                        random [integer] = names[num];
+                        c [num] = 1;
+                    }
+                }
+            }
             if (a==0){
                 a=0;
             }
@@ -21,15 +33,11 @@ public class MakeGroups
                     if(x<groupSize-1){
                         makeGroups[i]+=" & ";
                     }
-                    
                 }
-
             }
             else if (groupSize%2==1){
-
             }
         }
-
         return makeGroups;
     }
 } // end class HelloWorld 
