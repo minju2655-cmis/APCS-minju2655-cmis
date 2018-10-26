@@ -47,6 +47,7 @@ public class FundamentalsII
         System.out.println("Concat: "+Arrays.toString(concat(myList, example)));
         
         System.out.print("\n");
+        //reverse(myList);
         //System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
     } // end method main
     public static void printArray(int[] array, boolean skip){
@@ -212,10 +213,9 @@ public class FundamentalsII
         //}
         //return merge;
     //}
-    public static void reverse(int[] array){
-        for (int ctr=0;ctr<array.length;ctr++){
-            System.out.println(array);
-    
-        }
-        }
+    //public static void reverse(int[] array){
+        //for (int ctr=0;ctr<-array.length;ctr--){
+            //System.out.println(array[ctr]);
+        //}
+        //}
     }//end class FundamentalsII 

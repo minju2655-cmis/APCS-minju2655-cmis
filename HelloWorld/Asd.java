@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class MakeGroups
+public class Asd
 {
     public static void main ( String args[] )
     {
@@ -21,14 +21,18 @@ public class MakeGroups
             else if(random[m]!=null){
                 m = (int)(Math.random()*names.length-0)+0;
             }       
-        }
-        for (int a=0;a<names.length/groupSize;a++){
-            for (int b=0;b<groupSize;b++){
-                if (makeGroups[a]==null){
-                    makeGroups[a]=random[a];
+            for (int a=0;a<names.length/groupSize;a++){
+                for (int b=0;b<groupSize;b++){
+                    if (makeGroups[a]==null){
+                        makeGroups[a]=random[a];
+                    }
+                    if (random[a]==null){
+                        random[a]=names[i];
+                    }
                 }
             }
         }
-        return makeGroups;
-    }
-} // end class HelloWorld 
+
+        return random;
+    } 
+}// end class HelloWorld 
