@@ -3,7 +3,7 @@ public class FundamentalsII
 {
     public static void main ( String args[] ){
         int[] myList = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] example = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        int[] example = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23};
         double[] myList2 = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
         boolean[] myList3 ={true, false, false, true, true, false, false};
         String[] myList4 = {"one", "two", "three", "four", "five", "six", "seven", "eight"};
@@ -21,16 +21,16 @@ public class FundamentalsII
         System.out.print("\n");
         printArray(myList4,true);
         System.out.print("\n");
-        
+
         System.out.println("The last item is: "+ lastItem(myList));
         System.out.println("The last item is: "+ lastItem(myList2));
         System.out.println("The middle item is: "+ middleItem(myList3));
         System.out.println("The middle item is: "+ middleItem(myList4));
-        
+
         System.out.print("\n");
         System.out.println(Arrays.toString(randomInts(10, 10, 1)));
         System.out.println(Arrays.toString(randomDoubles(10, 10, 1)));
-        
+
         System.out.print("\n");
         System.out.println(Arrays.toString(copy(myList)));
         System.out.print("\n");
@@ -39,14 +39,15 @@ public class FundamentalsII
         System.out.println(Arrays.toString(copy(myList3)));
         System.out.print("\n");
         System.out.println(Arrays.toString(copy(myList4)));     
-        
+
         System.out.print("\n");
         System.out.println("Pairs: "+Arrays.toString(pairs(8)));
-        
+
         System.out.print("\n");
         System.out.println("Concat: "+Arrays.toString(concat(myList, example)));
-        
+
         System.out.print("\n");
+        System.out.println("Merge: "+Arrays.toString(merge(myList,example)));
         //reverse(myList);
         //System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
     } // end method main
@@ -64,6 +65,7 @@ public class FundamentalsII
             }
         }            
     }
+
     public static void printArray(double[] array, boolean skip){
         if (skip==true){
             for (int ctr=0;ctr<array.length;ctr++){
@@ -78,6 +80,7 @@ public class FundamentalsII
             }
         }   
     }
+
     public static void printArray(boolean[] array, boolean skip){
         if (skip==true){
             for (int ctr=0;ctr<array.length;ctr++){
@@ -92,6 +95,7 @@ public class FundamentalsII
             }
         }   
     }
+
     public static void printArray(String[] array, boolean skip){
         if (skip==true){
             for (int ctr=0;ctr<array.length;ctr++){
@@ -106,30 +110,39 @@ public class FundamentalsII
             }
         }   
     }
+
     public static int lastItem(int[] array){
         return array[array.length-1];
     }
+
     public static double lastItem(double[] array){
         return array[array.length-1];
     }
+
     public static boolean lastItem(boolean[] array){
         return array[array.length-1];
     }
+
     public static String lastItem(String[] array){
         return array[array.length-1];
     }
+
     public static int middleItem(int[] array){
         return array[array.length/2];
     }
+
     public static double middleItem(double[] array){
         return array[array.length/2];
     }
+
     public static boolean middleItem(boolean[] array){
         return array[array.length/2];
     }
+
     public static String middleItem(String[] array){
         return array[array.length/2];
     }
+
     public static int[] randomInts(int n, int min, int max){
         int[] random= new int[n];
         for (int ctr=0; ctr<n;ctr++){
@@ -137,6 +150,7 @@ public class FundamentalsII
         }
         return random;
     }
+
     public static double[] randomDoubles(int n, double min, double max){
         double[] random= new double[n];
         for (int ctr=0; ctr<n;ctr++){
@@ -144,6 +158,7 @@ public class FundamentalsII
         }
         return random;
     }
+
     public static int[] copy(int[] array){
         int[] copy = new int[array.length];
         System.out.println("Original: "+Arrays.toString(array));
@@ -153,6 +168,7 @@ public class FundamentalsII
         }
         return copy;
     }
+
     public static double[] copy(double[] array){
         double[] copy = new double[array.length];
         System.out.println("Original: "+Arrays.toString(array));
@@ -162,6 +178,7 @@ public class FundamentalsII
         }
         return copy;
     }
+
     public static boolean[] copy(boolean[] array){
         boolean[] copy = new boolean[array.length];
         System.out.println("Original: "+Arrays.toString(array));
@@ -169,8 +186,9 @@ public class FundamentalsII
         for (int ctr=0;ctr<array.length;ctr++){
             copy[ctr]=array[ctr];
         }
-           return copy;
+        return copy;
     }
+
     public static String[] copy(String[] array){
         String[] copy = new String[array.length];
         System.out.println("Original: "+Arrays.toString(array));
@@ -180,17 +198,19 @@ public class FundamentalsII
         }
         return copy;
     }
+
     public static int[] pairs(int n){
         int[] pairs = new int[n*2];
         int a = 1;
         for (int ctr=0;ctr<pairs.length;ctr++){    
-           pairs[ctr]=a*2;          
-           pairs[ctr+1]=a*2;
-           a+=1;
-           ctr+=1;
+            pairs[ctr]=a*2;          
+            pairs[ctr+1]=a*2;
+            a+=1;
+            ctr+=1;
         }
         return pairs;
     }
+
     public static int[] concat(int[] a, int[] b){
         int[] concat = new int[a.length+b.length];
         for (int ctr=0;ctr<a.length;ctr++){
@@ -201,21 +221,36 @@ public class FundamentalsII
         }
         return concat;
     }
-    //public static int[] merge(int[] a, int[] b){
-        //int[] merge = new int[a.length+b.length];
-        //for (int ctr=0;ctr<merge.length;ctr++){
-            //if(ctr%2==0){
-                //merge[ctr]=a[ctr/2];
-            //}
-            //else{
-                //merge[ctr]=b[ctr/2];
-            //}
-        //}
-        //return merge;
-    //}
-    //public static void reverse(int[] array){
-        //for (int ctr=0;ctr<-array.length;ctr--){
-            //System.out.println(array[ctr]);
-        //}
-        //}
-    }//end class FundamentalsII 
+
+    public static int[] merge(int[] a, int[] b){
+        int[] merge = new int[a.length+b.length];
+        int larger = 0;
+        int smaller = 0;  
+        int[] ab;
+        for (int i=0;i<merge.length;i++){
+            if (a.length <= b.length){
+                if (i%2==0){
+                    merge[i/2]=a[i/2];
+                }
+                else {
+                    merge[i/2]=b[i/2];
+                }
+            }
+            else {
+                if (i%2==1){
+                    merge[i/2]=a[i/2];
+                }
+                else {
+                    merge[i/2]=b[i/2];
+                }
+            }
+        }
+        return merge;
+    }
+
+    public static void reverse(int[] array){
+        for (int i=0;i<(array.length/2);i++){
+            int a = array[array.length-1];
+        }
+    }
+}//end class FundamentalsII 
