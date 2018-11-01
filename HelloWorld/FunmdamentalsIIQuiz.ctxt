@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=FunmdamentalsIIQuiz
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=int[]\ minmax(int[])
+comment3.params=array\ min\ max\ positive
+comment3.target=int[]\ filter(int[],\ int,\ int,\ boolean)
+numComments=4

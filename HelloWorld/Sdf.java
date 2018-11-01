@@ -33,7 +33,7 @@ public class Sdf
         return out;
     }
 
-    public static int[] merge(int[] a, int[] b)
+    public static int[] merge2(int[] a, int[] b)
     {
         int [] result = new int [a.length + b.length];
         int aPosit = 0;
