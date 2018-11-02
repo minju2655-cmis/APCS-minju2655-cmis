@@ -47,9 +47,12 @@ public class FundamentalsII
         System.out.println("Concat: "+Arrays.toString(concat(myList, example)));
 
         System.out.print("\n");
-        System.out.println("Merge: "+Arrays.toString(merge(myList,example)));
-        //reverse(myList);
-        //System.out.println("Merge: "+Arrays.toString(merge(myList, example)));
+        //System.out.println("Merge: "+Arrays.toString(merge(myList,example)));
+        System.out.print("\n");
+        reverse(myList);
+        int[] myList8 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.print("\n");
+        System.out.println("SubArray: "+Arrays.toString(subArray(myList8,1,8)));     
     } // end method main
     public static void printArray(int[] array, boolean skip){
         if (skip==true){
@@ -222,35 +225,45 @@ public class FundamentalsII
         return concat;
     }
 
-    public static int[] merge(int[] a, int[] b){
-        int[] merge = new int[a.length+b.length];
-        int larger = 0;
-        int smaller = 0;  
-        int[] ab;
-        for (int i=0;i<merge.length;i++){
-            if (a.length <= b.length){
-                if (i%2==0){
-                    merge[i/2]=a[i/2];
-                }
-                else {
-                    merge[i/2]=b[i/2];
-                }
-            }
-            else {
-                if (i%2==1){
-                    merge[i/2]=a[i/2];
-                }
-                else {
-                    merge[i/2]=b[i/2];
-                }
-            }
-        }
-        return merge;
-    }
+    //public static int[] merge(int[] a, int[] b){
+    //int[] merge = new int[a.length+b.length];
+    //}
 
     public static void reverse(int[] array){
+        int a = 0;
         for (int i=0;i<(array.length/2);i++){
-            int a = array[array.length-1];
+            a=array[i];
+            array[i]=array[array.length-1-i];
+            array[array.length-1-i]=a;
         }
+        System.out.println("Reverse: "+Arrays.toString(array));
     }
+    public static int[] subArray(int[] array, int start, int stop){
+        int[] subarray=new int [stop-start];
+        for (int i = start; i < stop; i++){
+            subarray[i-start] = array[i];
+        }
+        return subarray;
+    }
+    //public static int[] compareArrays(int[] a, int[] b){
+        //int at=0;
+        //int bt=0;
+        //int bg=0;
+        //int sl=0;
+        //int[] aa;
+        //int[] bb;
+        //if (a.length>=b.length){
+            //bg=a.length;
+            //sl=b.length;
+            //aa=a;
+            //bb=b;
+        //}
+        //else {
+            //bg=b.length;
+            //sl=a.length;
+            //aa=b;
+            //bb=a;
+        //}
+        //return aa;
+    //}
 }//end class FundamentalsII 

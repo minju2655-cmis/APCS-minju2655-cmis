@@ -16,6 +16,7 @@ public class Hmmm
         System.out.println(Arrays.toString(randomDoubles(7, 43.634, 2.19)) + "\n" + "\n");
 
         int[] intArray2 = {34, 0, 859, 66, 8, 1};
+        System.out.println("Merge:"+Arrays.toString(merge(intArray, intArray2)));
 
         System.out.println(Arrays.toString(subArray(intArray, 1, 3)));
         System.out.println(Arrays.toString(compareArrays(intArray, intArray2)) + "\n");
@@ -25,7 +26,6 @@ public class Hmmm
 
         printArray(maxMerge(a, b), false);
     }
-
     public static void printArray(int[] array, boolean skip){
         if (skip == false){
             for (int i = 0; i < array.length; i++){
@@ -42,7 +42,6 @@ public class Hmmm
         }
         System.out.print("\n");
     }
-
     public static void printArray(double[] array, boolean skip){
         if (skip == false){
             for (int i = 0; i < array.length; i++){
@@ -59,7 +58,6 @@ public class Hmmm
         }
         System.out.print("\n");
     }
-
     public static void printArray(boolean[] array, boolean skip){
         if (skip == false){
             for (int i = 0; i < array.length; i++){
@@ -76,7 +74,6 @@ public class Hmmm
         }
         System.out.print("\n");
     }
-
     public static void printArray(String[] array, boolean skip){
         if (skip == false){
             for (int i = 0; i < array.length; i++){
@@ -93,23 +90,18 @@ public class Hmmm
         }
         System.out.print("\n");
     }
-
     public static int lastItem(int[] array){
         return array[array.length - 1];
     }
-
     public static double lastItem(double[] array){
         return array[array.length - 1];
     }
-
     public static boolean lastItem(boolean[] array){
         return array[array.length - 1];
     }
-
     public static String lastItem(String[] array){
         return array[array.length - 1];
     }
-
     public static int middleItem(int[] array){
         int mid = 0;
         if (array.length % 2 == 0){
@@ -119,7 +111,6 @@ public class Hmmm
         }
         return array[mid];
     }
-
     public static double middleItem(double[] array){
         int mid = 0;
         if (array.length % 2 == 0){
@@ -129,7 +120,6 @@ public class Hmmm
         }
         return array[mid];
     }
-
     public static boolean middleItem(boolean[] array){
         int mid = 0;
         if (array.length % 2 == 0){
@@ -139,7 +129,6 @@ public class Hmmm
         }
         return array[mid];
     }
-
     public static String middleItem(String[] array){
         int mid = 0;
         if (array.length % 2 == 0){
@@ -149,7 +138,6 @@ public class Hmmm
         }
         return array[mid];
     }
-
     public static int[] randomInts(int n, int min, int max){
         int[] randInts = new int[n];
         int range = (max - min) + 1;
@@ -158,7 +146,6 @@ public class Hmmm
         }
         return randInts;
     }
-
     public static double[] randomDoubles(int n, double min, double max){
         double[] randDoubls = new double[n];
         int range = (int) (max - min) + 1;
@@ -167,7 +154,6 @@ public class Hmmm
         }
         return randDoubls;
     }
-
     public static int[] copy(int[] array){
         int[] copy = new int[array.length];
         for (int i = 0; i < array.length; i++){
@@ -175,7 +161,6 @@ public class Hmmm
         }
         return copy;
     }
-
     public static double[] copy(double[] array){
         double[] copy = new double[array.length];
         for (int i = 0; i < array.length; i++){
@@ -183,7 +168,6 @@ public class Hmmm
         }
         return copy;
     }
-
     public static boolean[] copy(boolean[] array){
         boolean[] copy = new boolean[array.length];
         for (int i = 0; i < array.length; i++){
@@ -191,7 +175,6 @@ public class Hmmm
         }
         return copy;
     }
-
     public static String[] copy(String[] array){
         String[] copy = new String[array.length];
         for (int i = 0; i < array.length; i++){
@@ -199,7 +182,6 @@ public class Hmmm
         }
         return copy;
     }
-
     public static int[] pairs(int n){
         int[] pairs = new int[n * 2];
         int x = 1;
@@ -211,7 +193,6 @@ public class Hmmm
         }
         return pairs;
     }
-
     public static int[] concat(int[] a, int[] b){
         int[] out = new int[a.length + b.length];
         for (int i = 0; i < a.length; i++){
@@ -222,7 +203,6 @@ public class Hmmm
         }
         return out;
     }
-
     public static int[] merge(int[] a, int[] b){
         int s = 0;
         int l = 0;
@@ -250,7 +230,38 @@ public class Hmmm
         }
         return out;
     }
-
+    public static int[] merge2(int[] a, int[] b)
+    {
+        int [] result = new int [a.length + b.length];
+        int aPosit = 0;
+        int bPosit = 0;
+        int mid;
+        if (a.length <= b.length)
+            mid = a.length;
+        else 
+            mid = b.length;
+        for (int resultPosit = 0; resultPosit < mid * 2; resultPosit += 2)
+        {
+            result [resultPosit] = a [aPosit];
+            result [resultPosit + 1] = b [bPosit];
+            aPosit ++;
+            bPosit ++;
+        }
+        int jay = mid * 2;
+        if (a.length <= b.length)
+            for (int bP = mid; bP < b.length; bP ++)
+            {
+                result [jay] = b[bP];
+                jay ++;
+            }
+        else
+            for (int aP = mid; aP < a.length; aP ++)
+            {
+                result [jay] = a[aP];
+                jay ++;
+            }
+        return result;
+    }
     public static void reverse(int[] array){
         int var = 0;
         for (int i = 0; i < (array.length / 2); i++){
@@ -261,7 +272,6 @@ public class Hmmm
 
         System.out.println(Arrays.toString(array));
     }
-
     public static int[] subArray(int[] array, int start, int stop){
         int[] subArray = new int[stop - start];
         for (int i = start; i < stop; i++){
@@ -269,7 +279,6 @@ public class Hmmm
         }
         return subArray;
     }
-
     public static int[] compareArrays(int[] a, int[] b){
         int atotal = 0;
         int btotal = 0;
@@ -308,7 +317,6 @@ public class Hmmm
         }
         return out;
     }
-
     public static int[] minimize(int[] array, int threshold){
         int[] out = new int[array.length];
         for (int i = 0; i < out.length; i++){
@@ -320,7 +328,6 @@ public class Hmmm
         }
         return out;
     }
-
     public static void maximize(int[] array, int threshold){
         for (int i = 0; i < array.length; i++){
             if (array[i] < threshold){
@@ -329,7 +336,6 @@ public class Hmmm
         }
         System.out.println(Arrays.toString(array));
     }
-
     public static double[] maxMerge(double[] a, double[] b){
         int longer = 0;
         int shorter = 0;
@@ -369,6 +375,4 @@ public class Hmmm
         }
         return out;
     }
-
-    
 }
