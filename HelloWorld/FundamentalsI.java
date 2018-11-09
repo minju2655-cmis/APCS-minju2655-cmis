@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Fundamentals1
+public class FundamentalsI
 {
     public static void main ( String args[] ){
         dataTypes();
