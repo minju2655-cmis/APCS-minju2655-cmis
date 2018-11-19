@@ -17,6 +17,7 @@ public class FundamentalsIII
                 {4.1, 4.2, 4.3, 4.4, 4.5},
                 {5.1, 5.2, 5.3, 5.4, 5.5}};
 
+        String [][] defaultString = new String [5][5];
         String [][] literalString = {{"#", " ", "#", " ", "#", " ", "#", " "},
                 {" ", "#", " ", "#", " ", "#", " ", "#"},
                 {"#", " ", "#", " ", "#", " ", "#", " "},
@@ -31,13 +32,13 @@ public class FundamentalsIII
         System.out.println(returnValue(literalString,0,6));
 
         System.out.print("\n");
-        setValue(literalInt,3,4,100);
+        //setValue(literalInt,3,4,100);
         print2D(literalInt);
         System.out.print("\n");
-        setValue(literalDouble,1,2,100.00);
+        //setValue(literalDouble,1,2,100.00);
         print2D(literalDouble);
         System.out.print("\n");
-        setValue(literalString,0,6,"Checkerboard");
+        //setValue(literalString,0,6,"Checkerboard");
         print2D(literalString);
         
         System.out.print("\n");
@@ -47,6 +48,15 @@ public class FundamentalsIII
         
         System.out.print("\n");
         snakePrint(literalInt);
+        
+        System.out.print("\n");
+        System.out.println(Arrays.deepToString(locate(literalString)));
+        
+        System.out.print("\n");
+        System.out.println(Arrays.deepToString(replace(literalInt,13,6)));
+        
+        System.out.print("\n");
+        System.out.println(Arrays.deepToString(shift(literalDouble,3)));
     } // end method main
     //public int[][] array(int h, int w){
     //int [][] array2d = new int[h][w];
@@ -126,6 +136,7 @@ public class FundamentalsIII
     {
         if (rowMajor == true)
         {
+            System.out.print("print2DArray(horizontally): "+"\n");
             for (int y = 0; y < array.length; y ++)
             {     
                 for (int x = 0; x < array[y].length; x ++)
@@ -137,6 +148,7 @@ public class FundamentalsIII
         }
         else
         {
+            System.out.print("print2DArray(vertically): "+"\n");
             for (int y = 0; y < array.length; y ++)
             {     
                 for (int x = 0; x < array[y].length; x ++)
@@ -149,6 +161,7 @@ public class FundamentalsIII
     }
     public static void snakePrint(int[][] arr)
     {
+        System.out.print("snakePrint: ");
         for (int y = 0; y < arr.length; y ++)
         {
             if (y % 2 == 0)
