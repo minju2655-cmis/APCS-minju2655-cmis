@@ -204,10 +204,8 @@ public class FundamentalsIII
     public static int[][] replace(int[][] array, int threshold, int newValue)
     {
         int [][] result = new int [array.length][array[0].length];
-        for (int y = 0; y < array.length; y ++)
-        {
-            for (int x = 0; x < array[y].length; x ++)
-            {
+        for (int y = 0; y < array.length; y ++){
+            for (int x = 0; x < array[y].length; x ++){
                 if (array [y][x] <= threshold){
                     result [y][x] = array [y][x];
                 }
@@ -221,21 +219,16 @@ public class FundamentalsIII
     public static double[][] shift(double[][] arr, int row)
     {
         double result [][] = new double [arr.length][arr[0].length];
-        for (int y = 0; y < arr.length; y ++)
-        {
-            if (y > row)
-            {
+        for (int y = 0; y < arr.length; y ++){
+            if (y > row){
                 result[y] = arr[y - 1];
             }
-            else if (y == row)
-            {
-                for (int x = 0; x < arr[0].length; x ++)
-                {
+            else if (y == row){
+                for (int x = 0; x < arr[0].length; x ++){
                     result[y][x] = Math.random() * 10;
                 }
             }
-            else
-            {
+            else{
                 result[y] = arr[y];
             }
         }
@@ -244,10 +237,8 @@ public class FundamentalsIII
     public static double [][] tilt (double [][] arr)
     {
         double [][] result = new double [arr[0].length][arr.length];
-        for (int y = 0; y < arr.length; y ++)
-        {
-            for (int x = 0; x < arr[0].length; x ++)
-            {
+        for (int y = 0; y < arr.length; y ++){
+            for (int x = 0; x < arr[0].length; x ++){
                 result[x][y] = arr[y][x];
             }
         }

@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Hmmm
+public class Array
 {
     public static void main(String args[]){
         int[] intArray = {34, 1, 859, 66, 10};
