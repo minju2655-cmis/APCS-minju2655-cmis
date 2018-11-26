@@ -57,6 +57,9 @@ public class FundamentalsIII
         
         System.out.print("\n");
         System.out.println(Arrays.deepToString(shift(literalDouble,3)));
+        
+        System.out.print("\n");
+         
     } // end method main
     //public int[][] array(int h, int w){
     //int [][] array2d = new int[h][w];
@@ -199,6 +202,7 @@ public class FundamentalsIII
                 }
             }
         }
+
         return result;
     } 
     public static int[][] replace(int[][] array, int threshold, int newValue)
@@ -244,6 +248,161 @@ public class FundamentalsIII
         }
         return result;
     } 
+    public static void greatest (int[][] array){
+        int sum;
+        int total = 0;
+        int row = array.length;
+        int col = array[0].length;
+        for (int r = 0; r < array.length; r++){
+            for (int c = 0; c < array[0].length; c++){
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     public static void greatsum(int array[][]){
+        int h = array.length;
+        int w = array[0].length;
+        int greatest = 0;
+        int sum;
+        String rc = "";
+        int n = 0;
+        for (int r = 0; r < h; r++){
+            sum = 0;
+            for (int c = 0; c < w; c++){
+                sum += array[r][c];
+            }
+            if (sum > greatest){
+                greatest = sum;
+                rc = "on row ";
+                n = r;
+            }
+        }
+        for (int c = 0; c < w; c++){
+            sum = 0;
+            for (int r = 0; r < h; r++){
+                sum += array[r][c];
+            }
+            if (sum > greatest){
+                greatest = sum;
+                rc = "in column ";
+                n = c;
+            }
+        }
+        System.out.println("The greatest sum is " + rc + n + ": " + greatest);
+    }
+public static int subgreatsum(int[][] array, int sw, int sh){
+        int h = array.length;
+        int w = array[0].length;
+        int sum;
+        int greatest = 0;
+        for (int y = 0; y < h - (sh - 1); y++){
+            for (int x = 0; x < w - (sw - 1); x++){
+                sum = 0;
+                for (int sy = y; sy < y + sh; sy++){
+                    for (int sx = x; sx < x + sw; sx++){
+                        sum += array[sy][sx];
+                    }
+                }
+                if (sum > greatest){
+                    greatest = sum;
+                }
+            }
+        }
+        return greatest;
+    }
+
+    public static String ringgreatsum(int[][] array){
+        int h = array.length;
+        int w = array[0].length;
+        int r;  //number of rings
+        String gr = "";
+        if (w <= h){
+            if (w % 2 == 1){
+                r = (w / 2) + 1;
+            }else{
+                r = w / 2;
+            }
+        }else {
+            if (h % 2 == 1){
+                r = (h / 2) + 1;
+            }else{
+                r = h / 2;
+            } 
+        }
+        int sum;
+        int greatest = 0;
+        for(int i = 0; i < r; i++){
+            sum = 0;
+            for(int x = i; x  < w; x++){
+                sum += array[i][x];
+                sum += array[h - 1 - i][x];
+            }
+            for(int y = i + 1; y < h - 1; y++){
+                sum += array[y][i];
+                sum += array[y][w - (i + 1)];
+            }
+            if (sum > greatest){
+                greatest = sum;
+                if (i == 0){
+                    gr = (i + 1) + "st";
+                }else if (i == 1){
+                    gr = (i + 1) + "nd";
+                }else {
+                    gr = (i + 1) + "rd";
+                }
+            }
+        }
+        return "The " + gr + " ring has the greatest sum.";
+    }
+    
+    public static String[][] newseats(String[][] array){
+        int h = array.length;
+        int w = array[0].length;
+        String[][] newchart = new String[h][w];
+        int rx;
+        int ry;
+        for(int y = 0; y < h; y++){
+            for(int x = 0; x < w; x++){
+                do{
+                    rx = (int) (Math.random() * w);
+                    ry = (int) (Math.random() * h);
+                }while((rx == x && ry == y) || newchart[ry][rx] != null);
+                newchart[ry][rx] = array[y][x];
+            }
+        }
+        return newchart;
+    }
     public static void greatest (int [][] arr, boolean greatestRow)
     {
         int resultSum = 0;
