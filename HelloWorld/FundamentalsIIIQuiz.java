@@ -19,28 +19,28 @@ public class FundamentalsIIIQuiz{
                 {-13029, -8753, -5213, -3666, 13910},
                 {16639, -11206, -14375, 8119, -9044},
                 {7253, -11243, -9436, -14244, -15883}};
-        System.out.println(allGreater(array3,-100000));
+        System.out.println(allGreater(array3,-16000));
         System.out.println(Arrays.deepToString(invertSign(array2,true)));
         System.out.println(Arrays.deepToString(swapColumns(array1,2,3)));
     }
     public static boolean allGreater(int[][] array, int threshold){
-        boolean result = true;
+        boolean result = true;//1pt
         for (int row = 0; row < array.length; row ++){
-            for (int col = 0; col < array[0].length; col ++){
+            for (int col = 0; col < array[0].length; col ++){//2pt
                 if (array[row][col] <= threshold){
-                    result = false;
+                    result = false;//1pt
                 }
             }
         }
-        return result;
+        return result;//1pt
     }
     public static int[][] invertSign(int[][] array, boolean positive){
-        int [][] result = new int [array.length][array[0].length];
+        int [][] result = new int [array.length][array[0].length];//1pt
         if (positive==true){
             for (int y = 0; y < array.length; y ++){
-                for (int x = 0; x < array[0].length; x ++){
+                for (int x = 0; x < array[0].length; x ++){//2pt
                     if (array[y][x] < 0){
-                        result [y][x] = -(array [y][x]);
+                        result [y][x] = -(array [y][x]);//1pt
                     }
                     else{
                         result [y][x] = array [y][x];
@@ -56,18 +56,18 @@ public class FundamentalsIIIQuiz{
                     }
                     else{
                         result [y][x] = -(array [y][x]);
-                    }
+                    }//2pt
                 }
             }
         }
         return result;
     }
     public static int[][] swapColumns(int[][] array, int c1, int c2) {
-         int [][] result = new int [array.length][array[0].length];
+         int [][] result = new int [array.length][array[0].length];//1pt
         for (int row = 0; row < array.length; row ++){
-            for (int col = 0; col < array[0].length; col ++){
-                if (col == c1){
-                    result [row][col] = array [row][c2];
+            for (int col = 0; col < array[0].length; col ++){//2pt
+                if (col == c1){//2pt
+                    result [row][col] = array [row][c2];//1pt
                 }
                 else if (col == c2){
                     result [row][col] = array [row][c1];
