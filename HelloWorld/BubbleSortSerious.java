@@ -1,28 +1,31 @@
-public class BubbleSort
-{
+public class BubbleSortSerious{
     public static void main(String[] args){
         int[] array = getArray(20, true);
         print(array);
         sort(array);
         print(array);
     }
-
+    
     public static int[] sort(int[] array){
-        int[] array1 = new int[array.length];
-        boolean swapped=true;
-        while (swapped){
-            for(int s = 0; s < array.length; s++){
-                if (array[s]>array[s+1]){
-                    array1[s]=array[s+1];
+        int boi = 0;
+        int hoi = 0;
+        
+        int doi = 0;
+        for(int s = 0; s < array.length; s++){
+            for(int x = 0; x < array.length; x++){
+                if(array[x]<array[s]){
+                    hoi=array[x];
                 }
-                else{
-                    swapped=false;
-                }
+                doi=x;
+            }
+            if(array[s]!=hoi){
+                boi=array[s];
+                array[s]=hoi;
+                array[doi]=boi;
             }
         }
-        return array1; 
+        return array; 
     }
-
 
     public static int[] getArray(int w, boolean random){
         int[] array = new int[w];
