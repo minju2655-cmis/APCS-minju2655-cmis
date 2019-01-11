@@ -8,21 +8,26 @@ public class BubbleSort
     }
 
     public static int[] sort(int[] array){
-        int[] array1 = new int[array.length];
         boolean swapped=true;
+        int boi=0;
+        int hoi=0;
         while (swapped){
-            for(int s = 0; s < array.length; s++){
+            int swap=0;
+            for(int s = 0; s < array.length-1; s++){
                 if (array[s]>array[s+1]){
-                    array1[s]=array[s+1];
-                }
-                else{
-                    swapped=false;
+                    boi=array[s];
+                    hoi=array[s+1];
+                    array[s]=hoi;
+                    array[s+1]=boi;
+                    swap+=1;
                 }
             }
+            if (swap==0){
+                swapped=false;
+            }
         }
-        return array1; 
+        return array; 
     }
-
 
     public static int[] getArray(int w, boolean random){
         int[] array = new int[w];
