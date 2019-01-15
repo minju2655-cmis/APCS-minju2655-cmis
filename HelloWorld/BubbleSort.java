@@ -28,7 +28,6 @@ public class BubbleSort
         }
         return array; 
     }
-
     public static int[] getArray(int w, boolean random){
         int[] array = new int[w];
         int ct = 0;
@@ -40,7 +39,6 @@ public class BubbleSort
         }
         return array;
     }
-
     public static void print(int[] array){
         String out = "{";
         for(int i = 0; i < array.length; i++){
