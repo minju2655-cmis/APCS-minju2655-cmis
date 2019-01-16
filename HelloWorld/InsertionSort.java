@@ -16,17 +16,23 @@ public class InsertionSort
         System.out.println();
     }
     public static void sort(int[] array){
-        int i=array[0];
-        int swap=0;
-        for(int x=1;x<array.length;x++){
-            if (array[x]>array[x-1]){
-                i=array[x];
-            }
-            else if (array[x]<array[x-1]){
-                swap=array[x-1];
-                array[x-1]=i;
-                array[x]=swap;
+        int b = array[0];
+        int a;
+        for(int x = 1; x < array.length; x++){
+            if(array[x] >= b){
+                b = array[x];
+            }else if(array[x] < b){
+                a = array[x];
+                for(int i = x - 1; i >= 0; i--){
+                    if (a < array[i]){
+                        array[i+1] = array[i];
+                        array[i] = a;
+                    }else{
+                        i = -1;
+                    }
+                }
             }
         }
+        
     }
 }
