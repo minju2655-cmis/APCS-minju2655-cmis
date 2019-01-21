@@ -29,7 +29,7 @@ public class RecursionExamples{
             return a;
         }
         else{
-            return;
+            return a - divide(a - 1, b);
         }
     }
 }
