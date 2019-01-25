@@ -236,30 +236,31 @@ public class Array
         int aPosit = 0;
         int bPosit = 0;
         int mid;
-        if (a.length <= b.length)
+        if(a.length <= b.length){
             mid = a.length;
-        else 
+        }
+        else{
             mid = b.length;
-        for (int resultPosit = 0; resultPosit < mid * 2; resultPosit += 2)
-        {
+        }
+        for (int resultPosit = 0; resultPosit < mid * 2; resultPosit += 2){
             result [resultPosit] = a [aPosit];
             result [resultPosit + 1] = b [bPosit];
             aPosit ++;
             bPosit ++;
         }
         int jay = mid * 2;
-        if (a.length <= b.length)
-            for (int bP = mid; bP < b.length; bP ++)
-            {
+        if (a.length <= b.length){
+            for (int bP = mid; bP < b.length; bP ++){
                 result [jay] = b[bP];
                 jay ++;
             }
-        else
-            for (int aP = mid; aP < a.length; aP ++)
-            {
+        }
+        else{
+            for (int aP = mid; aP < a.length; aP ++){
                 result [jay] = a[aP];
                 jay ++;
             }
+        }
         return result;
     }
     public static void reverse(int[] array){

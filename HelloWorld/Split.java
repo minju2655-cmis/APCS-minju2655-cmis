@@ -62,12 +62,10 @@ public class Split
                     if (arr1[i2] <= arr2[i3]) {
                         sorted[i] = arr1[i2];
                         i2++;
-
                     }
                     else  {
                         sorted[i] = arr2[i3];
                         i3++;
-
                     }
                 }
             }

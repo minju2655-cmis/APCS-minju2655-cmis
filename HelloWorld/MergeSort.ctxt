@@ -8,6 +8,6 @@ comment3.params=array
 comment3.target=int[]\ MergeSort(int[])
 comment4.params=array\ bool
 comment4.target=int[]\ Split(int[],\ boolean)
-comment5.params=array1\ array2
+comment5.params=arr1\ arr2
 comment5.target=int[]\ Merge(int[],\ int[])
 numComments=6
