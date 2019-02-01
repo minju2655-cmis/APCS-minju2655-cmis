@@ -3,7 +3,6 @@ public class SelectionSort
     public static int steps = 0;
     public static void main(String[] args){
     }
-
     public static int[] sort(int[] array){
         int smallestIdx = 0;
         int temp;
