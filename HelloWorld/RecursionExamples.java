@@ -48,11 +48,9 @@ public class RecursionExamples{
         if (b == 0){
             return 1;
         }
-
         else if (b == 1){
             return a;
         }
-
         else{
             return multiply(a, power(a, b - 1));
         }
