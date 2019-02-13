@@ -2,6 +2,7 @@ public class RecursionSortingQuiz
 {
     public static void main(String[] args){
         System.out.println(factorial(0));
+        System.out.println(factorial(1));
         System.out.println(factorial(5));
         System.out.println(factorial(10));
         int[] array={3,2,4};
@@ -9,17 +10,17 @@ public class RecursionSortingQuiz
     }
     public static int factorial(int n){
         if(n==0){
-            return 1;
+            return 1;//2pt
         }
         else if (n>0){  
-            return (n*factorial(n-1));
+            return (n*factorial(n-1));//3pt
         } 
         else{
             return 0;
         }
     }
     public static int[] kiefferSort(int[] array){
-        boolean swapped=true;
+        boolean swapped=true;//2pt
         int r = (int)(Math.random()*(array.length-1)+1);
         while (swapped){
             int swap=0;
@@ -27,8 +28,8 @@ public class RecursionSortingQuiz
                 if(array[i]>array[i+1]){
                     int random = array[r];
                     array[r] = array[i];
-                    array[i] = random;
-                    kiefferSort(array);
+                    array[i] = random;//2pt
+                    kiefferSort(array);//2pt
                     swap+=1;
                 }
             }
