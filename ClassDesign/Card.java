@@ -12,7 +12,7 @@ public class Card
         this.rank=rank;
     }
     public String toString(){
-        String[] suits = {"H","D","S","C"};
+        String[] suits = {"♥","♦","♠","♣"};
         String[] ranks = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
         String out = String.format("%s%s", ranks[rank], suits[suit]);
         return out;

@@ -8,9 +8,15 @@ public class Hand
     public void addCard(Card card){
         cards.add(card);
     }
-    //public int getValue(int suit, int rank){
-    
-    //}
+    public int getValue(Card card){
+        //Face Value -> 2~10
+        //J,Q,K -> 10
+        //A => 1 or 10
+        //person with two cards of 21 wins the person with three cards of 21
+        int score=0;
+        
+        return score;
+    }
     public String toString(){
         String out="";
         for (Card card:cards){
@@ -19,3 +25,5 @@ public class Hand
         return out;
     }
 }
+
+
