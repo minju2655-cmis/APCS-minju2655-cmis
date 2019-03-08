@@ -8,13 +8,22 @@ public class Hand
     public void addCard(Card card){
         cards.add(card);
     }
-    public int getValue(Card card){
-        //Face Value -> 2~10
-        //J,Q,K -> 10
-        //A => 1 or 10
-        //person with two cards of 21 wins the person with three cards of 21
-        int score=0;
-        
+    public int getValue(){
+        int score = 0;
+        for(Card card: cards){
+            int rank = card.getRank();
+            if(rank == 0){ // deal with aces
+                if(score + 11 > 21){
+                    score += 1;
+                }else{
+                    score += 11;
+                }
+            }else if(rank < 10){ // deal with numbers
+                score += rank + 1;
+            }else{ // deal with face cards
+                score += 10;
+            }
+        }
         return score;
     }
     public String toString(){
