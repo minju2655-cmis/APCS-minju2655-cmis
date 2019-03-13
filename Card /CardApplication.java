@@ -31,8 +31,14 @@ public class CardApplication
         System.out.println("\n");
         ////
         //Deck deck=new Deck(5);
-        //while (deck.draw()<21){
-            
+        //while (deck.nCards()<0){
+        //SO CONFUSINNGGGGG
+        //index 0= dealer
+        //index 1= player 1
+        //index 2= player 2
+        //index 3= player 3
+        //index 4= player 4
+        //For (int i=0;i<5;i++){}
         //}
     }
 }
