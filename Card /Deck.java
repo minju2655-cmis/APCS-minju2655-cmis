@@ -14,16 +14,13 @@ public class Deck
             nDecks--;
         }
     }
-
     public int nCards(){
         return cards.size();
     }
-
     public Card draw(){
         int last=cards.size()-1;
         return cards.remove(last);
     }
-
     public void shuffle(){
         for (int i=0;i<100;i++){
             int index1 = ((int)(Math.random() * cards.size()));
@@ -33,9 +30,9 @@ public class Deck
             cards.set(index2, c1);
             cards.set(index1, c2);
         }
-        //cards.get(index);
-        //cards.set(object,index);
     }
+    //cards.get(index);
+    //cards.set(object,index);
 }
 
 

@@ -2,9 +2,10 @@ public class CardApplication
 {
     public static void main(String[] args){
         Card c = new Card();
-        System.out.print(c);
+        System.out.print("Random Card: "+c);
         System.out.println("\n");
-        ////
+        ////RandomCard
+        
         Card[] deck = new Card[52];
         int d=0;
         for (int rank=0;rank<13;rank++){
@@ -14,31 +15,25 @@ public class CardApplication
             }
         }
         for (Card card:deck){
-            System.out.println(card);
+            System.out.print(card +" "); // -> Vertically
+            //System.out.println(card) -> Horizontally
         }
         System.out.println("\n");
-        ////
+        ////Deck
+        
         Hand hand=new Hand();
         for (int i=0;i<2;i++){
             hand.addCard(deck[(int)(Math.random()*52)]);
         }
-        System.out.println(hand);
-        ////
+        System.out.println("Random Cards in Your Hand: "+hand);
+        ////Random Cards in Your Hand
+        
         while (hand.getValue()<21){
             hand.addCard(deck[(int)(Math.random()*52)]);
         }
-        System.out.println(hand.getValue());
+        System.out.println("The Value of Random Cards in Your Hand: "+hand.getValue());
         System.out.println("\n");
-        ////
-        //Deck deck=new Deck(5);
-        //while (deck.nCards()<0){
-        //SO CONFUSINNGGGGG
-        //index 0= dealer
-        //index 1= player 1
-        //index 2= player 2
-        //index 3= player 3
-        //index 4= player 4
-        //For (int i=0;i<5;i++){}
-        //}
+        ////The Value of Cards in Your Hand (Less than 21 -> Adds a Card)
+       
     }
 }
