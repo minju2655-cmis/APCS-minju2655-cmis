@@ -1,22 +1,49 @@
+import java.util.*;
 public class CardApplicationII
 {
     public static void main(String[] args){
-        Deck deck=new Deck(5);
-        while (deck.nCards()<0){
-            //index 0= dealer
-            //index 1= player 1
-            //index 2= player 2
-            //index 3= player 3
-            //index 4= player 4
-            for (int i=0;i<4;i++){
-
+        Card[] deck1 = new Card[52];
+        int d=0;
+        for (int rank=0;rank<13;rank++){
+            for (int suit=0;suit<4;suit++){
+                deck1[d]=new Card(suit,rank);
+                d++;
             }
         }
-        //Giving Random Cards to the Players
-
-    }
+        for (Card card:deck1){
+            System.out.print(card +" "); 
+        }
+        ////
+        
+        Scanner Scan = new Scanner (System.in);
+        int players = Scan.nextInt();
+        Deck deck=new Deck(5);
+        List<Hand> hands=new ArrayList<Hand>();
+        for (int i=0;i<players;i++){
+            
+            for(int x=0;x<2;i++){
+            
+            }
+        }
+        //index 0= dealer
+        //index 1= player 1
+        //index 2= player 2
+        //index 3= player 3
+        //index 4= player 4
+        }
+    //Giving Random Cards to the Players
 }
+
 //List<Hand> hands
 //to get the first value -> hands.get(0)
 //to get the last value -> hands.get(hand.size()-1)
 //hands.get(hand.size()-1).getValue()
+
+
+//for (int i=0;i<players;i++){
+    //Hand tmpHnd = new Hand();
+    //for (int y = 0; y < 2; y++){
+        //tmpHnd.addCard(decks.draw());
+    //}
+    //hands.add(tmpHnd);
+//}
