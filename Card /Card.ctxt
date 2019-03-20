@@ -2,7 +2,7 @@
 comment0.target=Card
 comment1.params=
 comment1.target=Card()
-comment2.params=suit\ rank
+comment2.params=newsuit\ newrank
 comment2.target=Card(int,\ int)
 comment3.params=
 comment3.target=int\ getRank()

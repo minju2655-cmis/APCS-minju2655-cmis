@@ -15,15 +15,16 @@ public class CardApplicationII
         }
         ////
         
-        Scanner Scan = new Scanner (System.in);
-        int players = Scan.nextInt();
+        //Scanner Scan = new Scanner (System.in);
+        //int players = Scan.nextInt();
         Deck deck=new Deck(5);
         List<Hand> hands=new ArrayList<Hand>();
-        for (int i=0;i<players;i++){
-            
+        for (int i=0;i<5;i++){
+            Hand playerhands=new Hand();
             for(int x=0;x<2;i++){
-            
+                playerhands.addCard(deck1[(int)(Math.random()*52)]);
             }
+            hands.add(playerhands);
         }
         //index 0= dealer
         //index 1= player 1
@@ -39,11 +40,3 @@ public class CardApplicationII
 //to get the last value -> hands.get(hand.size()-1)
 //hands.get(hand.size()-1).getValue()
 
-
-//for (int i=0;i<players;i++){
-    //Hand tmpHnd = new Hand();
-    //for (int y = 0; y < 2; y++){
-        //tmpHnd.addCard(decks.draw());
-    //}
-    //hands.add(tmpHnd);
-//}

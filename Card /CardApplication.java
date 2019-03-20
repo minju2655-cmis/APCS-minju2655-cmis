@@ -14,6 +14,7 @@ public class CardApplication
                 d++;
             }
         }
+        System.out.print("Deck: ");
         for (Card card:deck){
             System.out.print(card +" "); // -> Vertically
             //System.out.println(card) -> Horizontally
@@ -26,12 +27,13 @@ public class CardApplication
             hand.addCard(deck[(int)(Math.random()*52)]);
         }
         System.out.println("Random Cards in Your Hand: "+hand);
+        System.out.println("Value of the Random Cards in Your Hand: "+hand.getValue());
         ////Random Cards in Your Hand
         
         while (hand.getValue()<21){
             hand.addCard(deck[(int)(Math.random()*52)]);
         }
-        System.out.println("The Value of Random Cards in Your Hand: "+hand.getValue());
+        System.out.println("The Value of More Card(s) Added"+"\n"+"(When the Value < 21): "+hand.getValue());
         System.out.println("\n");
         ////The Value of Cards in Your Hand (Less than 21 -> Adds a Card)
        
