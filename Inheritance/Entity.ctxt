@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Entity
+comment1.params=name
+comment1.target=Entity(java.lang.String)
+comment2.params=newname
+comment2.target=void\ changeName(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getname()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
