@@ -1,10 +1,16 @@
 public class Thing extends Entity{
-    //private ;
+    private int value;
     public Thing (){
-        super("default");
+        super("default thing");
     }
-    public Thing (String name){
-        super(name);
+    public Thing (String name, int age){
+        super(name+ age);
+    }
+    public void setValue(int newvalue){
+        this.value=newvalue;
+    }
+    public int getValue(){
+        return value;
     }
     public String toString(){
         String out = super.toString();
