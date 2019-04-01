@@ -22,29 +22,8 @@ public class EntityApplication{
         Idea i1 = new Idea("Confusion",2);
         i1.setPopularity(168);
         p(i1.getPopularity());
-        p(i1);        
-
-        p("\n");
+        p(i1);   
         
-        List<Entity> entities= new ArrayList<Entity>();
-        Person person = new Person("MinJu",17);
-        Thing thing = new Thing("Eraser",1);
-        Place place= new Place("Chiang Mai",500);
-        Idea idea= new Idea("Sloth",2);
-
-        entities.add(person);
-        entities.add(thing);
-        entities.add(place);
-        entities.add(idea);
-        
-        for (Entity e: entities){
-            p(e.getName());
-            p(e.getAge());
-            if (e instanceof Idea){
-                Idea i= (Idea) e;
-                p(idea.getPopularity());
-            }
-        }
     }
     public static void p(Object string){
         System.out.println(string);

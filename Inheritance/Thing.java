@@ -4,7 +4,7 @@ public class Thing extends Entity{
         super("default thing");
     }
     public Thing (String name, int age){
-        super(name+ age);
+        super(name + age);
     }
     public void setValue(int newvalue){
         this.value=newvalue;

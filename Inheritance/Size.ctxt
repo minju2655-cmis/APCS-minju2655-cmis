@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Size
+comment1.params=
+comment1.target=Size()
+comment2.params=newwidth
+comment2.target=void\ setwidth(int)
+comment3.params=
+comment3.target=int\ getwidth()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

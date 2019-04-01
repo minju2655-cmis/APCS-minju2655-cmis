@@ -1,9 +1,9 @@
 public class Place extends Entity{
     private int population;
-    public Place (){
+    public Place(){
         super("default place");
     }
-    public Place (String name, int age){
+    public Place(String name, int age){
         super(name+age);
     }
     public void setPopulation(int newpopulation){
