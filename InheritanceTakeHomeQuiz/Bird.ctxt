@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Bird
+comment1.params=x\ y\ color
+comment1.target=Bird(int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getColor()
+comment3.params=food
+comment3.target=boolean\ eat(java.lang.String)
+comment4.params=x\ y
+comment4.target=void\ fly(int,\ int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
