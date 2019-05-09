@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Changeable
+comment1.params=newwidth
+comment1.target=void\ valueWidth(int)
+comment2.params=
+comment2.target=int\ getWidth()
+numComments=3
