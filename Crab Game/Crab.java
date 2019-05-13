@@ -31,4 +31,5 @@ public class Crab extends Actor
             world.removeObject(worm);
         }
     }    
+  
 }
