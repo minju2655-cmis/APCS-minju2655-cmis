@@ -32,4 +32,10 @@ public class MyWorld extends World
         addObject(ppl1,349,262);
         ppl1.setLocation(440,309);
     }
+    public void act(){
+    
+        if(Greenfoot.isKeyDown("2")){
+            Greenfoot.setWorld(new MyWorld2());
+        }
+    }
 }

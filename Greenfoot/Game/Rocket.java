@@ -22,7 +22,10 @@ public class Rocket extends Actor
         }
         if (Greenfoot.isKeyDown("right")){
             move(4);
-            
+        }
+        if (isAtEdge()){
+            Greenfoot.setWorld(new MyWorld2());
+
         }
     }
 }
