@@ -26,11 +26,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Rocket rocket = new Rocket();
-        addObject(rocket,301,186);
-        PPL1 ppl1 = new PPL1();
-        addObject(ppl1,349,262);
-        ppl1.setLocation(440,309);
+       
     }
     public void act(){
     
