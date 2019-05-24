@@ -17,8 +17,13 @@ public class TitlePage extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(950, 633, 1); 
-
+        prepare();
     }
     
-    
+    private void prepare()
+    {
+        //Start start = new Start("START");
+        //addObject(start,400,100);
+        //start.setLocation(382,117);
+    }
 }
