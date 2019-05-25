@@ -31,7 +31,7 @@ public class Start extends Actor
     }    
     private void click(){
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new MyWorld());
+            //Greenfoot.setWorld(new MyWorld());
         }
     }    
 }

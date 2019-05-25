@@ -1,31 +1,32 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Start here.
+ * Write a description of class Title here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Title extends Actor
+public class Title extends World
 {
-    /**
-     * Act - do whatever the Start wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
 
-    public void act() 
+    /**
+     * Constructor for objects of class Title.
+     * 
+     */
+    public Title()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
+        prepare();
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
     {
-        //prepare();
-        click();
-    }    
-    //public void setLocation(int x, int y){
-        //x=
-    //}
-    private void click(){
-        if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new MyWorld());
-        }
+        PressStart pressstart = new PressStart();
+        addObject(pressstart,300,200);
     }
 }
-
