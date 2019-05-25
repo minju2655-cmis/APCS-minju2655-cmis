@@ -12,15 +12,18 @@ public class Monster extends Actor
     private int speed = 1;
     private GreenfootImage left1 = new GreenfootImage("left1.png");
     private GreenfootImage left2 = new GreenfootImage("left2.png");
-    private GreenfootImage left3 = new GreenfootImage("left4.png");
-    private GreenfootImage left4 = new GreenfootImage("left6.png");
+    private GreenfootImage left3 = new GreenfootImage("left3.png");
+    private GreenfootImage left4 = new GreenfootImage("left4.png");
     
     private GreenfootImage right1 = new GreenfootImage("right1.png");
     private GreenfootImage right2 = new GreenfootImage("right2.png");
-    private GreenfootImage right3 = new GreenfootImage("right4.png");
-    private GreenfootImage right4 = new GreenfootImage("right6.png");
+    private GreenfootImage right3 = new GreenfootImage("right3.png");
+    private GreenfootImage right4 = new GreenfootImage("right4.png");
     
     private int animationCounter = 0;
+    public Monster(){
+        setLocation(0,0);
+    }
     public void act(){
         movement();
         animationCounter++;
@@ -49,8 +52,8 @@ public class Monster extends Actor
         frame++;
     }
     public void moveRight(){
-        setLocation(getX()+speed,getY()-1);
-        if(animationCounter%9==0){
+        setLocation(getX()+speed,getY());
+        if(animationCounter%4==0){
             motionRight();
         }
     }
@@ -61,10 +64,10 @@ public class Monster extends Actor
         else if (frame==2){
             setImage(right2);
         }
-        else if (frame==4){
+        else if (frame==3){
             setImage(right3);
         }
-        else if (frame==6){
+        else if (frame==4){
             setImage(right4);
             frame = 1;
             return;
@@ -86,9 +89,15 @@ public class Monster extends Actor
     public void movement(){
         if(Greenfoot.isKeyDown("d")){
             moveRight();
+            if(Greenfoot.isKeyDown("a")){
+                moveLeft();
+            }
         }
         else if (Greenfoot.isKeyDown("a")){
             moveLeft();
+            if(Greenfoot.isKeyDown("d")){
+                moveRight();
+            }
         }
         else if (Greenfoot.isKeyDown("w")){
             //moveUp();

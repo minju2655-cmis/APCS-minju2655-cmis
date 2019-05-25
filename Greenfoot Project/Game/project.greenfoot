@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.Background1.image=images.jpeg
 class.Character.image=pixel-character-png-9.png
-class.Monster.image=output-onlinepngtools\ (18).png
+class.Monster.image=left1.png
 class.PressStart.image=press-start-black-text.png
 class.Title.image=586a2bafedd4065f84a69fbe09a55e88.jpg
 dependency1.from=Title
