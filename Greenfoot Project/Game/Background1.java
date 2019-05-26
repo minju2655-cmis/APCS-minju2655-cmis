@@ -17,5 +17,12 @@ public class Background1 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        prepare();
+    }
+    private void prepare()
+    {
+        Character1 character = new Character1();
+        addObject(character,50,320);
+        
     }
 }

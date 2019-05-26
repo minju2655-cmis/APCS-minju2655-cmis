@@ -29,7 +29,7 @@ public class Title extends World
         PressStart pressstart = new PressStart();
         addObject(pressstart,300,200);
 
-        Character character = new Character();
-        addObject(character,436,209);
+        //Character character = new Character();
+        //addObject(character,436,209);
     }
 }
