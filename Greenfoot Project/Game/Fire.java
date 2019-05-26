@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Fire extends Mover
+public class Fire extends Mover implements Killable
 {
     /**
      * Act - do whatever the fire wants to do. This method is called whenever
@@ -23,5 +23,8 @@ public class Fire extends Mover
         int myNewHeight = (int)myImage.getHeight()/28;
         int myNewWidth = (int)myImage.getWidth()/28;
         myImage.scale(myNewWidth, myNewHeight);
+    }
+    public void die(){
+        getWorld().removeObject(this);
     }
 }

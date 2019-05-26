@@ -9,7 +9,7 @@
 public class Character extends Actor
 {
     private int frame = 1;
-    private int speed = 1;
+    private int speed = 2;
     
     private GreenfootImage left1 = new GreenfootImage("left1.png");
     private GreenfootImage left2 = new GreenfootImage("left2.png");
@@ -54,9 +54,21 @@ public class Character extends Actor
         else if (getImage().equals(front1) || getImage().equals(front2) || getImage().equals(front3) || getImage().equals(front4)) {
             fire.setRotation(90);
         }
-        else {
+        else if (getImage().equals(right1) || getImage().equals(right2) || getImage().equals(right3) || getImage().equals(right4)) {
             fire.setRotation(0);
         }        
+        if((Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")) && ((Greenfoot.isKeyDown("w")) || Greenfoot.isKeyDown("up"))){
+            fire.setRotation(-45);
+        }
+        else if((Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up")) && ((Greenfoot.isKeyDown("a")) || Greenfoot.isKeyDown("left"))){
+            fire.setRotation(-135);
+        }
+        else if((Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down")) && ((Greenfoot.isKeyDown("d")) || Greenfoot.isKeyDown("right"))){
+            fire.setRotation(45);
+        }
+        else if((Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")) && ((Greenfoot.isKeyDown("s")) || Greenfoot.isKeyDown("down"))){
+            fire.setRotation(135);
+        }
     }
     public void moveLeft(){
         setLocation(getX()-speed,getY());
