@@ -29,6 +29,8 @@ public class Title extends World
         PressStart pressstart = new PressStart();
         addObject(pressstart,300,200);
 
+        TitlePage titlepage = new TitlePage();
+        addObject(titlepage,0,150);
         //Character character = new Character();
         //addObject(character,436,209);
     }
