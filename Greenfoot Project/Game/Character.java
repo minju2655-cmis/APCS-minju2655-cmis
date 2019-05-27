@@ -1,4 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Character1 here.
@@ -212,5 +212,4 @@ public class Character extends Actor
             diagonalDownLeft();
         }
     }
-    
 }

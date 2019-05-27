@@ -29,8 +29,11 @@ public class Title extends World
         PressStart pressstart = new PressStart();
         addObject(pressstart,300,200);
 
-        TitlePage titlepage = new TitlePage();
-        addObject(titlepage,0,150);
+        Character_Title charactertitle = new Character_Title();
+        addObject(charactertitle,0,150);
+        
+        Enemy_Title enemytitle = new Enemy_Title();
+        addObject(enemytitle,600,250);
         //Character character = new Character();
         //addObject(character,436,209);
     }
