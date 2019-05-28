@@ -38,7 +38,7 @@ public class Character extends Actor
     public void act(){
         movement();
         animationCounter++;
-        if("space".equals(Greenfoot.getKey())){
+        if ("space".equals(Greenfoot.getKey())){
             fire();
         }
     }

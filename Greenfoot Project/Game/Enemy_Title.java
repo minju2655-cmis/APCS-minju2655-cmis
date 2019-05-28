@@ -15,8 +15,8 @@ public class Enemy_Title extends Actor
     public Enemy_Title() 
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()*5;
-        int myNewWidth = (int)myImage.getWidth()*5;
+        int myNewHeight = (int)myImage.getHeight()*4;
+        int myNewWidth = (int)myImage.getWidth()*4;
         myImage.scale(myNewWidth, myNewHeight);
     }    
     public void act() 
