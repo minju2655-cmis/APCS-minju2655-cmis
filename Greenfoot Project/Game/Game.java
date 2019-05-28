@@ -24,9 +24,18 @@ public class Game extends World
     
     private void prepare()
     {
-        addObject(counter,80,50);
-        addObject(healthbar,520,50);
+        addObject(counter,520,50);
+        addObject(healthbar,80,50);
         Character character = new Character();
         addObject(character,147,184);
+        Enemy[] enemies = new Enemy[10];
+        for (int i = 0; i<enemies.length; i++){
+            enemies[i] = new Enemy();
+            int enemyX = Greenfoot.getRandomNumber(getWidth());
+            int enemyY = Greenfoot.getRandomNumber(getHeight());
+            addObject(enemies[i], enemyX, enemyY);
+
+        }
     }
+    
 }

@@ -16,11 +16,12 @@ public class Enemy extends GamePlay
     }
     public void act(){
         move(1);
-        if (getWorld().getObjects(Character.class).isEmpty()){
-            return;
-        } // skips following if the tank is not in world
-        Actor character = (Actor)getWorld().getObjects(Character.class).get(0); // gets reference to tank
-        turnTowards(character.getX(), character.getY()); // turn toward tank
+        if (Greenfoot.getRandomNumber(20)==1){
+            setRotation(Greenfoot.getRandomNumber(360));
+        }
+        if (getX() <=0 || getY() <=0){
+            turn (180);
+        }
         hitByFire();
     }    
     public void hitByFire(){
