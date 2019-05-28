@@ -1,20 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Barrier here.
+ * Write a description of class Text here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Barrier extends Text
+public class Text extends Actor
 {
     /**
-     * Act - do whatever the Barrier wants to do. This method is called whenever
+     * Act - do whatever the Text wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        setImage(new GreenfootImage("|",50,Color.BLACK,null));
-        getImage().setTransparency(0);
+        // Add your action code here.
     }    
 }

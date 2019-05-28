@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy extends Actor
+public class Enemy extends GamePlay
 {
     public Enemy(){
         GreenfootImage myImage = getImage();
@@ -34,4 +34,5 @@ public class Enemy extends Actor
             getWorld().removeObject(this);            
         }
     }
+    
 }

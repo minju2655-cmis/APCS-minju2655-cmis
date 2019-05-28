@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PressStart extends Actor
+public class PressStart extends TitlePage
 {
     public PressStart(){
          GreenfootImage myImage = getImage();
@@ -25,7 +25,7 @@ public class PressStart extends Actor
     }   
     private void click(){
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new Background1());
+            Greenfoot.setWorld(new Game());
         }
     }
 }

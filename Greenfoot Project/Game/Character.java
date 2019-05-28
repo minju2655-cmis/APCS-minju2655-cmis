@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends Actor implements Movable 
+public class Character extends GamePlay implements Movable 
 {
     private int frame = 1;
     private int speed = 2;
@@ -32,6 +32,8 @@ public class Character extends Actor implements Movable
     private GreenfootImage back4 = new GreenfootImage("back4.png");
     
     private int animationCounter = 0;
+    boolean touchingEnemy = false;
+
     public Character(){
         setLocation(0,0); 
     }
@@ -41,6 +43,8 @@ public class Character extends Actor implements Movable
         if ("space".equals(Greenfoot.getKey())){
             fire();
         }
+        hitEnemy();
+
     }
     private void fire(){
         Fire fire = new Fire();
@@ -210,6 +214,26 @@ public class Character extends Actor implements Movable
         }
         if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
             diagonalDownLeft();
+        }
+    }
+    public void hitEnemy(){
+        Actor enemy = getOneIntersectingObject(Enemy.class);
+        if (enemy !=null){
+            World myWorld = getWorld();
+            Game game = (Game)myWorld;
+            HealthBar healthbar = game.getHealthBar();
+            if (touchingEnemy == false){
+                healthbar.loseHealth();
+                touchingEnemy = true;
+                if (healthbar.health<=0){
+                    GameOver gameover = new GameOver();
+                    myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+                    myWorld.removeObject(this);
+                }
+            }
+        }
+        else{
+            touchingEnemy = false;
         }
     }
 }

@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Game extends World
 {
     Counter counter = new Counter();
+    HealthBar healthbar = new HealthBar();
     public Game(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
@@ -17,9 +18,15 @@ public class Game extends World
     public Counter getCounter(){
         return counter;
     }
+    public HealthBar getHealthBar(){
+        return healthbar;
+    }
+    
     private void prepare()
     {
         addObject(counter,80,50);
-        
+        addObject(healthbar,520,50);
+        Character character = new Character();
+        addObject(character,147,184);
     }
 }
