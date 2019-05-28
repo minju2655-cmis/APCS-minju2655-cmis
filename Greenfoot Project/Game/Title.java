@@ -27,16 +27,15 @@ public class Title extends World
     private void prepare()
     {
         PressStart pressstart = new PressStart();
-        addObject(pressstart,300,200);
+        addObject(pressstart,300,70);
 
         Character_Title charactertitle = new Character_Title();
-        addObject(charactertitle,0,150);
+        addObject(charactertitle,0,305);
 
         Enemy_Title enemytitle = new Enemy_Title();
-        addObject(enemytitle,600,250);
-        //Character character = new Character();
-        //addObject(character,436,209);
-        Character character = new Character();
-        addObject(character,373,118);
+        addObject(enemytitle,600,320);
+        
+        Barrier barrier = new Barrier();
+        addObject(barrier,190,305);
     }
 }

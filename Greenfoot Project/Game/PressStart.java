@@ -10,9 +10,10 @@ public class PressStart extends Actor
 {
     public PressStart(){
          GreenfootImage myImage = getImage();
-         int myNewHeight = (int)myImage.getHeight()/2;
-         int myNewWidth = (int)myImage.getWidth()/2;
+         int myNewHeight = (int)myImage.getHeight()/3;
+         int myNewWidth = (int)myImage.getWidth()/3;
          myImage.scale(myNewWidth, myNewHeight);
+         myImage.setTransparency(170);
     }
     /**
      * Act - do whatever the PressStart wants to do. This method is called whenever

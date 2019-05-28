@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends Actor
+public class Character extends Actor implements Movable 
 {
     private int frame = 1;
     private int speed = 2;
@@ -48,25 +48,25 @@ public class Character extends Actor
         if (getImage().equals(left1) || getImage().equals(left2) || getImage().equals(left3) || getImage().equals(left4)) {
             fire.setRotation(180);
         }
-        if (getImage().equals(back1) || getImage().equals(back2) || getImage().equals(back3) || getImage().equals(back4)) {
+        else if (getImage().equals(back1) || getImage().equals(back2) || getImage().equals(back3) || getImage().equals(back4)) {
             fire.setRotation(270);
         }
-        if (getImage().equals(front1) || getImage().equals(front2) || getImage().equals(front3) || getImage().equals(front4)) {
+        else if (getImage().equals(front1) || getImage().equals(front2) || getImage().equals(front3) || getImage().equals(front4)) {
             fire.setRotation(90);
         }
-        if (getImage().equals(right1) || getImage().equals(right2) || getImage().equals(right3) || getImage().equals(right4)) {
+        else if (getImage().equals(right1) || getImage().equals(right2) || getImage().equals(right3) || getImage().equals(right4)) {
             fire.setRotation(0);
         }        
         if(Greenfoot.isKeyDown("right") && (Greenfoot.isKeyDown("up"))){
             fire.setRotation(-45);
         }
-        if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
+        else if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
             fire.setRotation(-135);
         }
-        if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
+        else if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
             fire.setRotation(45);
         }
-        if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
+        else if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
             fire.setRotation(135);
         }
     }
@@ -202,13 +202,13 @@ public class Character extends Actor
         if(Greenfoot.isKeyDown("right") && (Greenfoot.isKeyDown("up"))){
             diagonalUpRight();
         }
-        else if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
+        if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
             diagonalUpLeft();
         }
-        else if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
+        if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
             diagonalDownRight();
         }
-        else if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
+        if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
             diagonalDownLeft();
         }
     }

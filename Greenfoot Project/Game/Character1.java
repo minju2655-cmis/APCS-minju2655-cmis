@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character1 extends Actor
+public class Character1 extends Actor implements Movable
 {
     private int frame = 1;
-    private int speed = 2;
+    private int speed = 4;
     private int animationCounter = 0;
 
     private GreenfootImage left1 = new GreenfootImage("left1.png");

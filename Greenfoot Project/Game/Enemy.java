@@ -8,7 +8,6 @@ import java.util.*;
  */
 public class Enemy extends Actor
 {
-    private double slowmo = 0.5;
     public Enemy(){
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/10;
@@ -22,5 +21,17 @@ public class Enemy extends Actor
         } // skips following if the tank is not in world
         Actor character = (Actor)getWorld().getObjects(Character.class).get(0); // gets reference to tank
         turnTowards(character.getX(), character.getY()); // turn toward tank
+        hitByFire();
     }    
+    public void hitByFire(){
+        Actor fire= getOneIntersectingObject(Fire.class);
+        if (fire != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(fire);
+            Game game = (Game)getWorld();
+            Counter counter = game.getCounter();
+            counter.addScore();
+            getWorld().removeObject(this);            
+        }
+    }
 }
