@@ -15,7 +15,7 @@ public class Enemy extends GamePlay
         myImage.scale(myNewWidth, myNewHeight);
     }
     public void act(){
-        move(1);
+        move(2);
         if (Greenfoot.getRandomNumber(20)==1){
             setRotation(Greenfoot.getRandomNumber(360));
         }
@@ -32,8 +32,7 @@ public class Enemy extends GamePlay
             Game game = (Game)getWorld();
             Counter counter = game.getCounter();
             counter.addScore();
-            getWorld().removeObject(this);            
+            getWorld().removeObject(this);     
         }
     }
-    
 }
