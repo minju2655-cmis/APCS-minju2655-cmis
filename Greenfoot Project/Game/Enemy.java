@@ -17,7 +17,7 @@ public class Enemy extends GamePlay implements William_Attackable
     public void act(){
         move(1);
         follow();
-        hitByFire();
+        getKilled();
     }    
     public void follow(){
         if (getWorld().getObjects(Character.class).isEmpty()){
@@ -26,7 +26,7 @@ public class Enemy extends GamePlay implements William_Attackable
         Actor character = (Actor)getWorld().getObjects(Character.class).get(0); // gets reference to tank
         turnTowards(character.getX(), character.getY()); // turn toward tank
     }
-    public void hitByFire(){
+    public void getKilled(){
         Actor fire= getOneIntersectingObject(Fire.class);
         if (fire != null){
             World myWorld = getWorld();

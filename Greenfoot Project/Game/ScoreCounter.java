@@ -17,6 +17,12 @@ public class ScoreCounter extends Text
     {
         setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,new Color(0,0,0,0)));
     }    
+    public int getScore(){
+        return score;
+    }
+    public void setScore(int newScore){
+        this.score = newScore;
+    }
     public void addScore(){
         score++;
     }

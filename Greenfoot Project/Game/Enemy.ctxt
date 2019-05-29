@@ -8,5 +8,5 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ follow()
 comment4.params=
-comment4.target=void\ hitByFire()
+comment4.target=void\ getKilled()
 numComments=5

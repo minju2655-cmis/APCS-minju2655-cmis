@@ -8,17 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-    /**
-     * Constructor for objects of class GameOv.
-     * 
-     */
+    ScoreCounter score = new ScoreCounter();
+
     public GameOver()
     {    
         super(600, 400, 1); 
         GreenfootImage img = new GreenfootImage("GameOver.png");
         img.scale(getWidth(), getHeight());
-        setBackground(img);   
-        //addObject(counter,520,50); // carry counter to different world
-
+        setBackground(img);  
     }
 }

@@ -33,8 +33,8 @@ public class HealthBar extends Text
         myimg.fillRect(1,1,health*pixelsPerHealthPoint,healthBarHeight);
         
     }
-    public void loseHealth(){
-        health--;
+    public void setHealth(int damage){
+        this.health = health-damage;
         
     }
 }
