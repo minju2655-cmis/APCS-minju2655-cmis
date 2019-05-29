@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy extends GamePlay
+public class Enemy extends GamePlay implements William_Attackable
 {
     public Enemy(){
         GreenfootImage myImage = getImage();
@@ -15,22 +15,24 @@ public class Enemy extends GamePlay
         myImage.scale(myNewWidth, myNewHeight);
     }
     public void act(){
-        move(2);
-        if (Greenfoot.getRandomNumber(20)==1){
-            setRotation(Greenfoot.getRandomNumber(360));
-        }
-        if (getX() <=0 || getY() <=0){
-            turn (180);
-        }
+        move(1);
+        follow();
         hitByFire();
     }    
+    public void follow(){
+        if (getWorld().getObjects(Character.class).isEmpty()){
+            return;
+        } // skips following if the tank is not in world
+        Actor character = (Actor)getWorld().getObjects(Character.class).get(0); // gets reference to tank
+        turnTowards(character.getX(), character.getY()); // turn toward tank
+    }
     public void hitByFire(){
         Actor fire= getOneIntersectingObject(Fire.class);
         if (fire != null){
             World myWorld = getWorld();
             myWorld.removeObject(fire);
             Game game = (Game)getWorld();
-            Counter counter = game.getCounter();
+            ScoreCounter counter = game.getCounter();
             counter.addScore();
             getWorld().removeObject(this);     
         }

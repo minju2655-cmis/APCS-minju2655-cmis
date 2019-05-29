@@ -227,7 +227,7 @@ public class Character extends GamePlay implements Movable
                 healthbar.loseHealth();
                 touchingEnemy = true;
                 if (healthbar.health<=0){
-                    Greenfoot.setWorld(new GameOv());
+                    Greenfoot.setWorld(new GameOver());
                 }
             }
         }

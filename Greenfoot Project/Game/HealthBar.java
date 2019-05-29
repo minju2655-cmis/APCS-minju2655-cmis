@@ -9,8 +9,8 @@ import greenfoot.Color;
 public class HealthBar extends Text
 {
     GreenfootImage img;
-    int health = 8;
-    int healthBarWidth = 80;
+    int health = 10;
+    int healthBarWidth = 100;
     int healthBarHeight = 15;
     int pixelsPerHealthPoint = (int) healthBarWidth/health;
     /**

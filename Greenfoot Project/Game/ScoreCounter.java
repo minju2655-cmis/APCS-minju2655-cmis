@@ -6,7 +6,7 @@ import greenfoot.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Counter extends Text
+public class ScoreCounter extends Text
 {
     private int score = 0;
     /**
@@ -15,7 +15,7 @@ public class Counter extends Text
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,Color.BLACK));
+        setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,new Color(0,0,0,0)));
     }    
     public void addScore(){
         score++;
