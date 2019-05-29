@@ -73,6 +73,7 @@ public class Character extends GamePlay implements Movable
         else if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
             fire.setRotation(135);
         }
+        //change it to something else
     }
     public void moveLeft(){
         setLocation(getX()-speed,getY());

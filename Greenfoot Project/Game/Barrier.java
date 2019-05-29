@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import greenfoot.Color;
 /**
  * Write a description of class Barrier here.
  * 
@@ -14,7 +14,7 @@ public class Barrier extends Text
      */
     public void act() 
     {
-        setImage(new GreenfootImage("|",50,Color.BLACK,null));
+        setImage(new GreenfootImage("|",50,Color.BLACK,Color.WHITE));
         getImage().setTransparency(0);
     }    
 }

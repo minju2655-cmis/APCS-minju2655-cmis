@@ -15,7 +15,7 @@ public class Counter extends Text
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,null));
+        setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,Color.BLACK));
     }    
     public void addScore(){
         score++;
