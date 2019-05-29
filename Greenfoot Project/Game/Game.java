@@ -12,12 +12,6 @@ public class Game extends World
     HealthBar healthbar = new HealthBar();
     Character character = new Character();
 
-    static final int MAX_BIRDS = 10; // adjust this value
-    static final int MIN_BIRDS = 5; // adjust this value
-    static final int INTERVAL= 40;
-    Long beginTime = System.currentTimeMillis();
-    
-
     public Game(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
@@ -32,7 +26,6 @@ public class Game extends World
     public HealthBar getHealthBar(){
         return healthbar;
     }
-    
     private void prepare()
     {
         addObject(counter,520,50);
@@ -46,15 +39,14 @@ public class Game extends World
             addObject(enemies[i], enemyX, enemyY);
         }
     }
-
     public void act()
     {
-        int max = 5;        
-        int randomwidth = Greenfoot.getRandomNumber(200);
-        int randomheight = Greenfoot.getRandomNumber(500);
+        int max = 8;        
+        int x = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(400);
         if (getObjects(Enemy.class).size()<max)
         {
-           addObject(new Enemy(),randomwidth,randomheight);    
+           addObject(new Enemy(),x,y);    
         }
         if (getObjects(Enemy.class).size()<max-1){
             max++;
