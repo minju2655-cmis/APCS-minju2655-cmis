@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy_Title extends TitlePage
+public class Enemy_Title extends Actor
 {
     private GreenfootImage m1 = new GreenfootImage("m1.png");
     private GreenfootImage m2 = new GreenfootImage("m2.png");

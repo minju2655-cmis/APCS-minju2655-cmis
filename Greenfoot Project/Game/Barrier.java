@@ -6,7 +6,7 @@ import greenfoot.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Barrier extends Text
+public class Barrier extends Actor
 {
     /**
      * Act - do whatever the Barrier wants to do. This method is called whenever

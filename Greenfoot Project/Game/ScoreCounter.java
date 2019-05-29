@@ -6,7 +6,7 @@ import greenfoot.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScoreCounter extends Text
+public class ScoreCounter extends Actor
 {
     private int score = 0;
     /**

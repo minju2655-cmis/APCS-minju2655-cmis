@@ -29,17 +29,25 @@ public class Game extends World
         addObject(counter,520,50);
         addObject(healthbar,80,50);
         addObject(character,147,184);
-        Enemy[] enemies = new Enemy[7];
+        Enemy[] enemies = new Enemy[5];
         for (int i = 0; i<enemies.length; i++){
             enemies[i] = new Enemy();
             int enemyX = Greenfoot.getRandomNumber(getWidth());
             int enemyY = Greenfoot.getRandomNumber(getHeight());
             addObject(enemies[i], enemyX, enemyY);
         }
+        Enemy2[] enemiess = new Enemy2[4] ;
+        for (int i = 0; i<enemiess.length; i++){
+            enemiess[i] = new Enemy2();
+            int enemyX = Greenfoot.getRandomNumber(getWidth());
+            int enemyY = Greenfoot.getRandomNumber(getHeight());
+            addObject(enemiess[i], enemyX, enemyY);
+        }
     }
     public void act()
     {
-        int max = 5;        
+        int max = 4;   
+        int max2 = 3;
         int x = Greenfoot.getRandomNumber(600);
         int y = Greenfoot.getRandomNumber(400);
         if (getObjects(Enemy.class).size()<max)
@@ -48,6 +56,13 @@ public class Game extends World
         }
         if (getObjects(Enemy.class).size()<max-1){
             max++;
+        }
+        if (getObjects(Enemy2.class).size()<max2)
+        {
+           addObject(new Enemy2(),x,y);    
+        }
+        if (getObjects(Enemy2.class).size()<max2-1){
+            max2++;
         }
     }
 }

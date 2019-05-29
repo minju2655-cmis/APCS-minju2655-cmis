@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends GamePlay implements Movable 
+public class Character extends Actor implements Movable 
 {
     private int frame = 1;
     private int speed = 2;
@@ -44,7 +44,6 @@ public class Character extends GamePlay implements Movable
             fire();
         }
         hitEnemy();
-
     }
     private void fire(){
         Fire fire = new Fire();
@@ -235,4 +234,6 @@ public class Character extends GamePlay implements Movable
             touchingEnemy = false;
         }
     }
+
+    
 }

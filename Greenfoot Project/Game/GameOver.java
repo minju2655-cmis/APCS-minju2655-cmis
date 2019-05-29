@@ -13,8 +13,15 @@ public class GameOver extends World
     public GameOver()
     {    
         super(600, 400, 1); 
-        GreenfootImage img = new GreenfootImage("GameOver.png");
+        GreenfootImage img = new GreenfootImage("GameOv.png");
         img.scale(getWidth(), getHeight());
         setBackground(img);  
+        prepare();
+    }
+    private void prepare(){
+        ReStart restart = new ReStart();
+        addObject(restart,520,330);
+
+
     }
 }

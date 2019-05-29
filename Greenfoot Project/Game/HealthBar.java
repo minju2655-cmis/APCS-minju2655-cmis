@@ -6,7 +6,7 @@ import greenfoot.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HealthBar extends Text
+public class HealthBar extends Actor implements William_Attackable
 {
     GreenfootImage img;
     int health = 10;
@@ -23,7 +23,7 @@ public class HealthBar extends Text
     public void act() 
     {
         update(); 
-    }    
+    }   
     public void update(){
         setImage(new GreenfootImage(healthBarWidth+2,healthBarHeight+2));
         GreenfootImage myimg = getImage();
@@ -31,10 +31,11 @@ public class HealthBar extends Text
         myimg.drawRect(0,0,healthBarWidth+1, healthBarHeight+1);
         myimg.setColor(Color.RED);
         myimg.fillRect(1,1,health*pixelsPerHealthPoint,healthBarHeight);
-        
+    }
+    public int getHealth(){
+        return health;
     }
     public void setHealth(int damage){
         this.health = health-damage;
-        
     }
 }

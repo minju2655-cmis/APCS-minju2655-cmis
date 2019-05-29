@@ -1,8 +1,7 @@
 #BlueJ class context
 comment0.target=William_Attackable
 comment1.params=
-comment1.target=void\ follow()
-comment1.text=follow\ another\ actor\ *
-comment2.params=
-comment2.target=void\ getKilled()
+comment1.target=int\ getHealth()
+comment2.params=damage
+comment2.target=void\ setHealth(int)
 numComments=3

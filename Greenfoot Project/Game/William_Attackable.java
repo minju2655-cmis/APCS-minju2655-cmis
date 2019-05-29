@@ -1,8 +1,6 @@
 public interface William_Attackable
 {
-    /** follow another actor **/
-    public void follow();
-    
-    public void getKilled();
-    /** when the actor gets killed then remove the actor **/
+    public int getHealth();
+    public void setHealth(int damage);
+    /** when the actor gets hit then the health decreases by the amount of damage **/
     }
