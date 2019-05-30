@@ -8,7 +8,7 @@ import greenfoot.Color;
  */
 public class ScoreCounter extends Actor
 {
-    public int score = 0;
+    public static int score = 0;
     /**
      * Act - do whatever the Counter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,7 +17,7 @@ public class ScoreCounter extends Actor
     {
         setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,new Color(0,0,0,0)));
     }    
-    public int getScore(){
+    public static int getScore(){
         return score;
     }
     public void setScore(int newScore){
@@ -25,5 +25,8 @@ public class ScoreCounter extends Actor
     }
     public void addScore(){
         score++;
+        if (score>20){
+            
+        }
     }
 }

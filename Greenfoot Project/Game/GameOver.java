@@ -8,19 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-    //public int score = Enemy.getScore();
-
+    public ScoreCounter score;
     public GameOver()
     {    
         super(600, 400, 1); 
         GreenfootImage img = new GreenfootImage("GameOv.png");
         img.scale(getWidth(), getHeight());
-        setBackground(img);  
+        setBackground(img); 
+        score = new ScoreCounter();
         prepare();
     }
-    private void prepare(){
+    public void prepare(){
         ReStart restart = new ReStart();
         addObject(restart,520,330);
-        //addObject(score,100,50);
+        addObject(score,100,50);
+    }
+    public ScoreCounter getScore(){
+        return score;
     }
 }

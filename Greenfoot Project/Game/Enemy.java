@@ -27,10 +27,9 @@ public class Enemy extends Actor
         turnTowards(character.getX(), character.getY()); // turn toward tank
     }
     public void getKilled(){
-        Actor fire= getOneIntersectingObject(Fire.class);
+        Actor fire = getOneIntersectingObject(Fire.class);
         if (fire != null){
-            World myWorld = getWorld();
-            myWorld.removeObject(fire);
+            getWorld().removeObject(fire);
             Game game = (Game)getWorld();
             ScoreCounter score = game.getCounter();
             score.addScore();

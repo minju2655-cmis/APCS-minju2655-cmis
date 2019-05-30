@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends Actor implements Movable 
+public class Character2 extends Actor implements Movable 
 {
     private int frame = 1;
     private int speed = 2;
@@ -34,7 +34,7 @@ public class Character extends Actor implements Movable
     private int animationCounter = 0;
     boolean touchingEnemy = false;
 
-    public Character(){
+    public Character2(){
         setLocation(0,0); 
     }
     public void act(){
