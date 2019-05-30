@@ -40,7 +40,7 @@ public class Character extends Actor implements Movable
     public void act(){
         movement();
         animationCounter++;
-        if ("space".equals(Greenfoot.getKey())){
+        if ("enter".equals(Greenfoot.getKey())){
             fire();
         }
         hitEnemy();
@@ -60,16 +60,16 @@ public class Character extends Actor implements Movable
         else if (getImage().equals(right1) || getImage().equals(right2) || getImage().equals(right3) || getImage().equals(right4)) {
             fire.setRotation(0);
         }        
-        if(Greenfoot.isKeyDown("right") && (Greenfoot.isKeyDown("up"))){
+        if(Greenfoot.isKeyDown("d") && (Greenfoot.isKeyDown("w"))){
             fire.setRotation(-45);
         }
-        else if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
+        else if(Greenfoot.isKeyDown("w") && (Greenfoot.isKeyDown("a"))){
             fire.setRotation(-135);
         }
-        else if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
+        else if(Greenfoot.isKeyDown("s") && (Greenfoot.isKeyDown("d"))){
             fire.setRotation(45);
         }
-        else if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
+        else if(Greenfoot.isKeyDown("a") && (Greenfoot.isKeyDown("s"))){
             fire.setRotation(135);
         }
         //change it to something else
@@ -191,28 +191,28 @@ public class Character extends Actor implements Movable
         }
     }
     public void movement(){
-        if(Greenfoot.isKeyDown("right")){
+        if(Greenfoot.isKeyDown("d")){
             moveRight();
         }
-        if (Greenfoot.isKeyDown("left")){
+        if (Greenfoot.isKeyDown("a")){
             moveLeft();
         }
-        if (Greenfoot.isKeyDown("up")){
+        if (Greenfoot.isKeyDown("w")){
             moveUp();
         }
-        if (Greenfoot.isKeyDown("down")){
+        if (Greenfoot.isKeyDown("s")){
             moveDown();
         }
-        if(Greenfoot.isKeyDown("right") && (Greenfoot.isKeyDown("up"))){
+        if(Greenfoot.isKeyDown("d") && (Greenfoot.isKeyDown("w"))){
             diagonalUpRight();
         }
-        if(Greenfoot.isKeyDown("up") && (Greenfoot.isKeyDown("left"))){
+        if(Greenfoot.isKeyDown("w") && (Greenfoot.isKeyDown("a"))){
             diagonalUpLeft();
         }
-        if(Greenfoot.isKeyDown("down") && (Greenfoot.isKeyDown("right"))){
+        if(Greenfoot.isKeyDown("s") && (Greenfoot.isKeyDown("d"))){
             diagonalDownRight();
         }
-        if(Greenfoot.isKeyDown("left") && (Greenfoot.isKeyDown("down"))){
+        if(Greenfoot.isKeyDown("a") && (Greenfoot.isKeyDown("s"))){
             diagonalDownLeft();
         }
     }

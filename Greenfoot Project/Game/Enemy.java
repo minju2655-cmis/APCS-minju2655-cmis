@@ -32,9 +32,9 @@ public class Enemy extends Actor
             World myWorld = getWorld();
             myWorld.removeObject(fire);
             Game game = (Game)getWorld();
-            ScoreCounter counter = game.getCounter();
-            counter.addScore();
-            getWorld().removeObject(this);     
+            ScoreCounter score = game.getCounter();
+            score.addScore();
+            getWorld().removeObject(this);                 
         }
     }
 }

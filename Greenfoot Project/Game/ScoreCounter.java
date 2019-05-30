@@ -8,7 +8,7 @@ import greenfoot.Color;
  */
 public class ScoreCounter extends Actor
 {
-    private int score = 0;
+    public int score = 0;
     /**
      * Act - do whatever the Counter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

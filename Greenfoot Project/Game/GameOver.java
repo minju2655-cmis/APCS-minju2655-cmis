@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-    ScoreCounter score = new ScoreCounter();
+    //public int score = Enemy.getScore();
 
     public GameOver()
     {    
@@ -21,7 +21,6 @@ public class GameOver extends World
     private void prepare(){
         ReStart restart = new ReStart();
         addObject(restart,520,330);
-
-
+        //addObject(score,100,50);
     }
 }
