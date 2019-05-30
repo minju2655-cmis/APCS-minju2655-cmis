@@ -21,7 +21,13 @@ public class Title extends World
     private void prepare()
     {
         PressStart pressstart = new PressStart();
-        addObject(pressstart,300,90);
+        addObject(pressstart,290,120);
+        
+        Describe describe = new Describe();
+        addObject(describe,260,60);
+        
+        Description description = new Description();
+        addObject(description,400,60);
 
         Character_Title charactertitle = new Character_Title();
         addObject(charactertitle,0,305);

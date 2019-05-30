@@ -81,7 +81,7 @@ public class Game extends World
                 addObject(enemies[i], enemyX, enemyY);
             }
         }
-        else if (ScoreCounter.getScore()>50){
+        else if (ScoreCounter.getScore()>50 && ScoreCounter.getScore()<70){
             Enemy[] enemies = new Enemy[7];
             for (int i = 0; i<enemies.length; i++){
                 enemies[i] = new Enemy();
@@ -154,7 +154,7 @@ public class Game extends World
                 max++;
             }
         }
-        else if (ScoreCounter.getScore()>50){
+        else if (ScoreCounter.getScore()>50 && ScoreCounter.getScore()<70){
             int max = 7;   
             int x = Greenfoot.getRandomNumber(600);
             int y = Greenfoot.getRandomNumber(400);
