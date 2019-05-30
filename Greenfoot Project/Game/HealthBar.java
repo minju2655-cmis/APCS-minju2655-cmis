@@ -9,7 +9,7 @@ import greenfoot.Color;
 public class HealthBar extends Actor implements William_Attackable
 {
     GreenfootImage img;
-    int health = 10;
+    int health = 20;
     int healthBarWidth = 100;
     int healthBarHeight = 15;
     int pixelsPerHealthPoint = (int) healthBarWidth/health;

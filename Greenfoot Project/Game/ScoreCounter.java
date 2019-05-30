@@ -20,13 +20,10 @@ public class ScoreCounter extends Actor
     public static int getScore(){
         return score;
     }
-    public void setScore(int newScore){
-        this.score = newScore;
+    public static void setScore(int newScore){
+        score = newScore;
     }
     public void addScore(){
         score++;
-        if (score>20){
-            
-        }
     }
 }

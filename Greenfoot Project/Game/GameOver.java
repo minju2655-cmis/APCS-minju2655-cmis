@@ -15,13 +15,15 @@ public class GameOver extends World
         GreenfootImage img = new GreenfootImage("GameOv.png");
         img.scale(getWidth(), getHeight());
         setBackground(img); 
-        score = new ScoreCounter();
         prepare();
     }
     public void prepare(){
+        score = new ScoreCounter();
         ReStart restart = new ReStart();
-        addObject(restart,520,330);
-        addObject(score,100,50);
+        addObject(restart,95,370);
+        addObject(score,100,80);
+        ReturnToTitlePage ret = new ReturnToTitlePage();
+        addObject(ret,170,320);
     }
     public ScoreCounter getScore(){
         return score;

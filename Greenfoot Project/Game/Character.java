@@ -217,7 +217,7 @@ public class Character extends Actor implements Movable
         }
     }
     public void hitEnemy(){
-        Actor enemy = getOneIntersectingObject(Enemy.class);
+        Actor enemy = getOneIntersectingObject(Enemy.class); // only one hits the character
         if (enemy !=null){
             World myWorld = getWorld();
             Game game = (Game)myWorld;
@@ -226,7 +226,8 @@ public class Character extends Actor implements Movable
                 healthbar.setHealth(1);
                 touchingEnemy = true;
                 if (healthbar.health<=0){
-                    Greenfoot.setWorld(new GameOver());                    
+                    Greenfoot.setWorld(new GameOver());  
+                    
                 }
             }
         }
@@ -234,5 +235,6 @@ public class Character extends Actor implements Movable
             touchingEnemy = false;
         }
     }
+
 
 }
