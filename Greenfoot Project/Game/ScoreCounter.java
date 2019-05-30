@@ -15,7 +15,10 @@ public class ScoreCounter extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Score: "+ score, 30, Color.WHITE,new Color(0,0,0,0)));
+        setImage(new GreenfootImage("Score: "+ score, 32, Color.WHITE,new Color(0,0,0,0)));
+        if (ScoreCounter.getScore()>=70){
+            Greenfoot.setWorld(new Win()); 
+        }
     }    
     public static int getScore(){
         return score;

@@ -19,11 +19,15 @@ public class GameOver extends World
     }
     public void prepare(){
         score = new ScoreCounter();
+        addObject(score,300,50);
+        CloseToWin ctw = new CloseToWin();
+        addObject(ctw,300,90);
         ReStart restart = new ReStart();
         addObject(restart,95,370);
-        addObject(score,100,80);
         ReturnToTitlePage ret = new ReturnToTitlePage();
         addObject(ret,170,320);
+        
+        
     }
     public ScoreCounter getScore(){
         return score;
