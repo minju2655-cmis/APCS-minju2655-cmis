@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri May 31 07:56:07 ICT 2019
+#Fri May 31 07:59:25 ICT 2019
 target16.name=ScoreCounter
 dependency35.to=Title
 class.Enemy_Title.image=m1.png
@@ -195,7 +195,7 @@ target18.type=ClassTarget
 target17.height=50
 dependency29.type=UsesDependency
 dependency26.from=Enemy
-class.ReStart.image=Restart.png
+class.ReStart.image=ReStart.png
 target4.type=ClassTarget
 target28.width=80
 target25.type=InterfaceTarget
@@ -394,7 +394,7 @@ target20.height=50
 dependency9.type=UsesDependency
 dependency6.from=GameOver
 target12.height=50
-world.lastInstantiated=Title
+world.lastInstantiated=GameOver
 class.Description.superclass=Details
 dependency14.to=Barrier
 target19.showInterface=false

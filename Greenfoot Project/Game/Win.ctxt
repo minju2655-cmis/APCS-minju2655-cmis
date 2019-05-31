@@ -6,6 +6,4 @@ comment1.target=Win()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Win.\n\ \n
 comment2.params=
 comment2.target=void\ prepare()
-comment3.params=
-comment3.target=ScoreCounter\ getCounter()
-numComments=4
+numComments=3

@@ -17,6 +17,9 @@ public class GameOver extends World
         setBackground(img); 
         prepare();
     }
+    public ScoreCounter getScore(){
+        return score;
+    }
     public void prepare(){
         score = new ScoreCounter();
         addObject(score,300,50);
@@ -26,10 +29,5 @@ public class GameOver extends World
         addObject(restart,95,370);
         ReturnToTitlePage ret = new ReturnToTitlePage();
         addObject(ret,170,320);
-        
-        
-    }
-    public ScoreCounter getScore(){
-        return score;
     }
 }

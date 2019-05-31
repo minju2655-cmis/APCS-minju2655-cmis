@@ -23,11 +23,7 @@ public class Win extends World
     public void prepare(){
         ReturnToTitlePage ret = new ReturnToTitlePage();
         addObject(ret,300,320);
-        addObject(score,300,260);
-        CloseToWin ctw = new CloseToWin();
-        addObject(ctw,300,110);
+
     }
-    public ScoreCounter getCounter(){
-        return score;
-    }
+
 }
