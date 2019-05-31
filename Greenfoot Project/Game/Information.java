@@ -30,10 +30,12 @@ public class Information extends World
         Keys keys = new Keys();
         addObject(keys,100,80);
         Aim aim = new Aim();
-        addObject(aim, 150, 340);
+        addObject(aim, 430, 340);
         Key key = new Key();
         addObject(key,340,80);
         Shoot shoot = new Shoot();
         addObject(shoot,260,160);
+        Back back = new Back();
+        addObject(back,100,340);
     }
 }
