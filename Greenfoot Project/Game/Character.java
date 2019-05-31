@@ -224,6 +224,7 @@ public class Character extends Actor implements Movable
             HealthBar healthbar = game.getHealthBar();
             if (touchingEnemy == false){
                 healthbar.setHealth(1);
+                healthbar.getHealth();
                 touchingEnemy = true;
                 if (healthbar.health<=0){
                     Greenfoot.setWorld(new GameOver());  
